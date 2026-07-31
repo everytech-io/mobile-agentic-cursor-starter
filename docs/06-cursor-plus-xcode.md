@@ -7,7 +7,7 @@ Cursor does not replace Xcode for iOS. This is the permanent workflow.
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  CURSOR                                                 │
-│  Spec · Plan Mode · Agent edits · Rules · LEARNINGS     │
+│  Spec · Plan Mode · Agent edits · AGENTS.md · LEARNINGS  │
 └───────────────────────────┬─────────────────────────────┘
                             │ you review diffs
                             ▼
@@ -42,7 +42,7 @@ xcodebuild -scheme StarterApp -destination 'platform=iOS Simulator,name=iPhone 1
 Copy into your project:
 
 1. [AGENTS.md](../AGENTS.md) — adapt stack section
-2. `.cursor/rules/` — one Swift/SwiftUI rule file
+2. `.cursor/skills/` — optional skill for your app folder
 3. [LEARNINGS.md](../LEARNINGS.md) — keep the habit
 
 Keep Xcode as verify. Always.

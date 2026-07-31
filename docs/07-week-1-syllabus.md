@@ -10,7 +10,7 @@ You can:
 - Write a mini-spec (goal / done-when / out-of-scope)
 - Use Plan Mode for multi-file features
 - Review diffs and verify in Xcode before trusting Agent output
-- Maintain `LEARNINGS.md` and one `.cursor/rules` file
+- Maintain `LEARNINGS.md`; understand `AGENTS.md` + skills (not rules-first)
 
 ## Schedule
 
@@ -19,7 +19,7 @@ You can:
 | 1 | [00-start-here](00-start-here.md), [01-install](01-install-and-open.md), [02-day-1](02-day-1-explore-and-edit.md) | [01-explore](../exercises/01-explore.md), [02-small-change](../exercises/02-small-change.md) | ~90 min | Empty state works in simulator |
 | 2 | [05-verify-loop](05-verify-loop.md) | Finish 02 if needed; re-run verify checklist | ~45 min | LEARNINGS entry #1 |
 | 3 | [03-plan-mode](03-plan-mode.md) | [03-plan-feature](../exercises/03-plan-feature.md) | ~90 min | Habit detail screen + navigation |
-| 4 | [04-rules-and-context](04-rules-and-context.md) | [04-capture-learning](../exercises/04-capture-learning.md) | ~60 min | One new rule + LEARNINGS #2–3 |
+| 4 | [04-rules-and-context](04-rules-and-context.md) | [04-capture-learning](../exercises/04-capture-learning.md) | ~60 min | AGENTS.md + skills + LEARNINGS |
 | 5 | [06-cursor-plus-xcode](06-cursor-plus-xcode.md) | Re-ship 03 cold in Xcode only verify | ~45 min | Full dual-app loop without notes |
 | 6–7 | [official-cursor-links](official-cursor-links.md) | Apply loop to **your** app | optional | AGENTS.md in your repo |
 

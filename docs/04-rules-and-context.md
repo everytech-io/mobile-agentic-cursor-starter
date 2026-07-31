@@ -1,16 +1,25 @@
-# Rules and context
+# Context, AGENTS.md, and skills
 
-Agents forget between sessions. **Rules and LEARNINGS.md are your memory.**
+Agents forget between sessions. You give them memory with **files in the repo** — not by re-explaining every time.
 
-Official: [Rules](https://cursor.com/docs/rules) · [Context / @ mentions](https://cursor.com/help/customization/context.md)
+Official: [Customizing agents](https://cursor.com/learn/customizing-agents) · [Skills](https://cursor.com/docs/skills) · [Context / @](https://cursor.com/help/customization/context.md)
 
-## Three layers in this repo
+## What to use in 2026 (simple version)
 
-| Layer | File | Purpose |
-|-------|------|---------|
-| Project instructions | [AGENTS.md](../AGENTS.md) | Always-on project context |
-| Path-scoped rules | [.cursor/rules/swiftui-exercises.mdc](../.cursor/rules/swiftui-exercises.mdc) | SwiftUI conventions for `sample-app/` |
-| Your session log | [LEARNINGS.md](../LEARNINGS.md) | What worked / failed for you |
+| Mechanism | When | This repo |
+|-----------|------|-----------|
+| **AGENTS.md** | Always-on project instructions | [AGENTS.md](../AGENTS.md) at repo root |
+| **Skills** | Conventions loaded when relevant | [.cursor/skills/swiftui-exercises/](../.cursor/skills/swiftui-exercises/SKILL.md) |
+| **LEARNINGS.md** | Your personal session log | [LEARNINGS.md](../LEARNINGS.md) |
+| **@ mentions** | Pin files/folders in chat | `@HabitListView.swift`, `@sample-app/` |
+
+### Do you still need `.cursor/rules/`?
+
+**Not for Week 1.** Cursor is moving toward **skills** for most customization ([`/migrate-to-skills`](https://cursor.com/docs/skills#migrating-rules-and-commands-to-skills) converts old dynamic rules).
+
+Use **rules** only when you need something **always injected** into every chat (team-wide guardrails, compliance). For SwiftUI conventions scoped to `sample-app/`, a **skill with `paths:`** is the modern equivalent — already in this repo.
+
+**AGENTS.md** covers project-wide context without YAML frontmatter. Start there.
 
 ## Using @ context
 
@@ -18,21 +27,22 @@ In Agent chat, type `@` to attach:
 
 - `@HabitListView.swift` — one file
 - `@sample-app/StarterApp/StarterApp/` — a folder
-- `@swiftui-exercises` — a rule (if configured in picker)
+- `/swiftui-exercises` — invoke the skill explicitly
 
-**Mobile habit:** Pin the files you care about. Do not let Agent grep randomly on a large codebase.
+**Mobile habit:** Pin the files you care about. Do not let Agent grep blindly on a large codebase.
 
-## When to add a new rule
+## When to add more
 
-Add a rule only when Agent makes the **same mistake twice**.
+Add a skill (or a LEARNINGS rule) only when Agent makes the **same mistake twice**.
 
-Example: keeps using `NavigationView` → add to `.cursor/rules/`:
+Example skill addition:
 
-```markdown
-Never use NavigationView or NavigationLink(destination:). Use NavigationStack + navigationDestination.
 ```
+/create-skill
 
-Official best practice: [Rules — start simple](https://cursor.com/docs/rules#best-practices)
+When editing SwiftUI in sample-app/, never use NavigationView.
+Always remind learner to verify in Xcode after edits.
+```
 
 ## Exercise
 

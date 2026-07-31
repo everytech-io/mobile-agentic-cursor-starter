@@ -33,7 +33,7 @@ Plan Mode: Add a habit detail screen to HabitPeek.
 
 | Symptom | Fix |
 |---------|-----|
-| `NavigationView` in diff | Reject; cite rule `@swiftui-exercises` |
+| `NavigationView` in diff | Reject; cite `/swiftui-exercises` skill or AGENTS.md |
 | New files outside `Views/` | Ask to colocate with existing structure |
 | Plan adds ViewModel you don't need | Shrink plan — list screen may not need one |
 

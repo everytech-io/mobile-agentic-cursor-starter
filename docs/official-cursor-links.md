@@ -6,6 +6,8 @@ Curated links from [cursor.com/llms.txt](https://cursor.com/llms.txt). Use these
 
 | Topic | URL |
 |-------|-----|
+| **Watch first — Agents** | https://cursor.com/learn/agents |
+| **Watch first — Working with agents** | https://cursor.com/learn/working-with-agents |
 | Docs home | https://cursor.com/docs |
 | Quickstart | https://cursor.com/docs/get-started/quickstart |
 | Your first project | https://cursor.com/help/getting-started/first-project |
@@ -25,8 +27,8 @@ Curated links from [cursor.com/llms.txt](https://cursor.com/llms.txt). Use these
 
 | Topic | URL |
 |-------|-----|
-| Rules | https://cursor.com/docs/rules |
 | Skills | https://cursor.com/docs/skills |
+| Rules (optional; prefer skills) | https://cursor.com/docs/rules |
 | MCP | https://cursor.com/docs/mcp |
 | Context / @ mentions | https://cursor.com/help/customization/context |
 
@@ -35,8 +37,9 @@ Curated links from [cursor.com/llms.txt](https://cursor.com/llms.txt). Use these
 | Topic | URL |
 |-------|-----|
 | Understanding your codebase | https://cursor.com/learn/understanding-your-codebase |
-| Creating features | https://cursor.com/learn/creating-features |
 | Working with agents | https://cursor.com/learn/working-with-agents |
+| Creating features | https://cursor.com/learn/creating-features |
+| Customizing agents (rules vs skills) | https://cursor.com/learn/customizing-agents |
 | Reviewing and testing | https://cursor.com/learn/reviewing-testing |
 
 ## Mobile-specific

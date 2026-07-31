@@ -8,7 +8,7 @@ You do not need Xcode MCP or an M-series Mac. This course uses a proven dual wor
 
 | Tool | Role |
 |------|------|
-| **Cursor** | Spec, agent edits, rules, plan mode, review |
+| **Cursor** | Spec, Agent, Plan Mode, AGENTS.md, review |
 | **Xcode** | Build, run, debug, sign, ship |
 
 ## Who this is for
@@ -33,15 +33,17 @@ You do not need Xcode MCP or an M-series Mac. This course uses a proven dual wor
    cursor .
    ```
 
-2. **Read the entry guide** → [docs/00-start-here.md](docs/00-start-here.md)
+2. **Watch the two Cursor Learn lessons** → [docs/00-watch-first.md](docs/00-watch-first.md) (~15 min)
 
-3. **Open the sample app in Xcode**
+3. **Read the entry guide** → [docs/00-start-here.md](docs/00-start-here.md)
+
+4. **Open the sample app in Xcode**
    ```bash
    open sample-app/StarterApp/StarterApp.xcodeproj
    ```
    Press **⌘R** once to confirm it runs on the simulator.
 
-4. **Do Exercise 1 in Cursor** → [exercises/01-explore.md](exercises/01-explore.md)
+5. **Do Exercise 1 in Cursor** → [exercises/01-explore.md](exercises/01-explore.md)
 
 ## Repo structure
 
@@ -52,7 +54,7 @@ mobile-agentic-cursor-starter/
 ├── sample-app/StarterApp # Tiny SwiftUI app for practice
 ├── LEARNINGS.md          # Your session log (append after each exercise)
 ├── AGENTS.md             # Project instructions for Cursor Agent
-└── .cursor/rules/        # Example Cursor rules for SwiftUI
+└── .cursor/skills/       # SwiftUI skill (loads when editing sample-app)
 ```
 
 ## Learning path
@@ -63,7 +65,7 @@ mobile-agentic-cursor-starter/
 | 1 | [02-day-1-explore-and-edit](docs/02-day-1-explore-and-edit.md) | [02-small-change](exercises/02-small-change.md) | One verified change |
 | 2 | [05-verify-loop](docs/05-verify-loop.md) | (same exercise) | Trust lint/build, not vibes |
 | 3 | [03-plan-mode](docs/03-plan-mode.md) | [03-plan-feature](exercises/03-plan-feature.md) | Plan before multi-file edits |
-| 4 | [04-rules-and-context](docs/04-rules-and-context.md) | [04-capture-learning](exercises/04-capture-learning.md) | Rules + LEARNINGS.md habit |
+| 4 | [04-rules-and-context](docs/04-rules-and-context.md) | [04-capture-learning](exercises/04-capture-learning.md) | AGENTS.md + skills + LEARNINGS |
 | 5 | [06-cursor-plus-xcode](docs/06-cursor-plus-xcode.md) | Ship in Xcode | Full dual-app loop |
 
 Full syllabus: [docs/07-week-1-syllabus.md](docs/07-week-1-syllabus.md)
@@ -83,11 +85,12 @@ Official Cursor docs index: [docs/official-cursor-links.md](docs/official-cursor
 
 ## Sample app
 
-**HabitPeek** — a minimal habit tracker with intentional gaps for exercises:
+The Xcode project lives at `sample-app/StarterApp/`. The app’s **display name is HabitPeek** — a fictional mini habit tracker we use only for exercises (not a real product).
 
-- Add loading/empty states
-- Add a detail screen
-- Fix a deliberate UX rough edge
+It shows a list of habits with streaks, in-memory storage, and **intentional gaps** for you to fix with Agent:
+
+- No empty state (Exercise 02)
+- No detail screen (Exercise 03)
 
 The app is small on purpose. You practice **agent workflow**, not architecture.
 
@@ -95,9 +98,9 @@ The app is small on purpose. You practice **agent workflow**, not architecture.
 
 Apply the same loop to your own app (or fork this repo's pattern):
 
-1. Copy `AGENTS.md` and `.cursor/rules/` into your project
+1. Copy `AGENTS.md` and `.cursor/skills/` into your project
 2. Keep using Xcode for verify
-3. Add skills/rules only when the agent repeats the same mistake twice
+3. Add skills or LEARNINGS entries only when the agent repeats the same mistake twice
 
 ## License
 

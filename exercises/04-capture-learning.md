@@ -1,4 +1,4 @@
-# Exercise 04 — Capture learning + add a rule
+# Exercise 04 — Capture learning (+ optional skill)
 
 **Goal:** Make the workflow durable across sessions.  
 **Time:** ~45 minutes  
@@ -19,43 +19,36 @@ Template:
 - One thing I'll always do from now on:
 ```
 
-## Part B — Add one project rule
+## Part B — Optional: add a skill (not rules)
 
-Pick **one** mistake Agent made twice (or might make on your team app).
+You do **not** need `.cursor/rules/` for this course. Use:
 
-Examples:
+- **AGENTS.md** — always-on project context (already in repo)
+- **Skills** — load when editing Swift files (see `.cursor/skills/swiftui-exercises/`)
 
-- Deprecated navigation APIs
-- Wrong deployment target APIs
-- Adding packages without asking
-
-Create or extend `.cursor/rules/swiftui-exercises.mdc` with one bullet.
-
-Or ask Agent:
+If Agent made the same mistake twice, ask:
 
 ```
-/create-rule
+/create-skill
 
-When editing SwiftUI in sample-app/, never use NavigationView or ObservableObject.
-Always state iOS 17 minimum.
+When editing SwiftUI under sample-app/, never use NavigationView.
+Remind me to verify in Xcode after edits.
 ```
 
-Review the generated rule before committing.
+Review the generated skill before keeping it.
 
 ## Part C — Optional commit
 
 If you're learning git + Agent:
 
 ```
-Stage only LEARNINGS.md and .cursor/rules/. Write a one-line commit message. Do not push.
+Stage only LEARNINGS.md. Write a one-line commit message. Do not push.
 ```
-
-(Mentor pushes; learners practice locally.)
 
 ## Done when
 
 - [ ] LEARNINGS.md has 3+ entries
-- [ ] At least one custom rule bullet exists
-- [ ] You can explain why rules beat re-prompting every session
+- [ ] You understand AGENTS.md vs skills vs LEARNINGS
+- [ ] You know you can skip `.cursor/rules/` unless you need always-on team guardrails
 
 Course complete for Week 1 core — see [docs/07-week-1-syllabus.md](../docs/07-week-1-syllabus.md).

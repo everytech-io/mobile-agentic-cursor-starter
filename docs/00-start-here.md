@@ -6,13 +6,14 @@ You will use **two apps**:
 
 | App | You use it for |
 |-----|----------------|
-| **Cursor** | Spec, Agent, Plan Mode, rules, reviewing diffs |
+| **Cursor** | Spec, Agent, Plan Mode, AGENTS.md, reviewing diffs |
 | **Xcode** | Build, run, debug — the source of truth |
 
 You do **not** need Xcode MCP or an M-series Mac for this course.
 
 ## Before you begin
 
+- [ ] [Watch/read the two Cursor Learn lessons](00-watch-first.md) (~15 min)
 - [ ] [Cursor](https://cursor.com/downloads) installed and signed in
 - [ ] Xcode installed
 - [ ] This repo cloned and opened in Cursor (`File → Open Folder`)
@@ -22,7 +23,7 @@ You do **not** need Xcode MCP or an M-series Mac for this course.
 open sample-app/StarterApp/StarterApp.xcodeproj
 ```
 
-Press **⌘R** on iPhone simulator. You should see **HabitPeek** with two habits.
+Press **⌘R** on iPhone simulator. You should see **HabitPeek** (the sample habit tracker) with two habits.
 
 ## How to use this repo
 
@@ -56,7 +57,7 @@ CAPTURE → One LEARNINGS.md entry
 **The Agent is a fast junior developer with terminal access.**
 
 - It does not "know" your app until it reads files.
-- It will confidently write wrong SwiftUI APIs unless you constrain it (rules, deployment target, review).
+- It will confidently write wrong SwiftUI APIs unless you constrain it (AGENTS.md, skills, deployment target, review).
 - **Your job:** spec, review, verify in Xcode, capture learnings.
 
 That is agentic engineering — not vibe coding.

@@ -21,7 +21,7 @@ You are helping a **rusty mobile developer** learn agentic workflow in this tuto
 - `docs/` — guided reading (ordered)
 - `exercises/` — hands-on prompts
 - `LEARNINGS.md` — learner session log (append only)
-- `.cursor/rules/swiftui-exercises.mdc` — SwiftUI constraints
+- `.cursor/skills/swiftui-exercises/` — SwiftUI conventions (loads when editing sample-app)
 
 ## Intentional gaps (for exercises)
 
