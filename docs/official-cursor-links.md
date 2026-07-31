@@ -21,6 +21,8 @@ Curated links from [cursor.com/llms.txt](https://cursor.com/llms.txt). Use these
 | Plan Mode | https://cursor.com/docs/agent/plan-mode |
 | Ask Mode | https://cursor.com/help/ai-features/ask-mode |
 | Debug Mode | https://cursor.com/docs/agent/debug-mode |
+| Bugbot | https://cursor.com/docs/bugbot |
+| Agent review | https://cursor.com/docs/agent/agent-review |
 | Prompting | https://cursor.com/docs/agent/prompting |
 
 ## Customize

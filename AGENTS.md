@@ -22,7 +22,8 @@ You are helping a **rusty mobile developer** learn agentic workflow in this tuto
 - `docs/HIGH-LEVEL-PLAN.md` — program plan; planner subagents expand into `docs/plans/`
 - `exercises/` — hands-on prompts
 - `LEARNINGS.md` — learner session log (append only)
-- `.cursor/skills/swiftui-exercises/` — SwiftUI conventions (loads when editing sample-app)
+- `.cursor/skills/swiftui-exercises/` — SwiftUI conventions (sample-app)
+- `.cursor/skills/ios-verify/` — post-edit Xcode verify ritual
 
 ## Intentional gaps (for exercises)
 

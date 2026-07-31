@@ -1,6 +1,6 @@
 # High-level plan — Mobile Agentic Cursor Starter
 
-> **Status:** Skeleton for a planning subagent (e.g. **Fable**, Plan Mode, or dedicated planner) to expand.  
+> **Status:** Week 1–2 curriculum shipped — see [plans/2026-08-01-expanded-plan.md](plans/2026-08-01-expanded-plan.md)  
 > **Repo:** https://github.com/everytech-io/mobile-agentic-cursor-starter  
 > **Owner:** EveryTech — teach rusty mobile devs Cursor + agentic workflow
 
@@ -51,6 +51,8 @@ No Xcode MCP required. Intel + Apple Silicon supported.
 | Exercises 01–04 | Done | `exercises/` |
 | Sample app **StarterApp** | Done | `sample-app/StarterApp/` — habit list, in-memory |
 | AGENTS.md + skill | Done | root + `.cursor/skills/swiftui-exercises/` |
+| Week 2 docs (modes, AGENTS, skills, debug) | Done | `docs/08`–`11`, exercises `05`–`08` |
+| Expanded plan | Done | `docs/plans/2026-08-01-expanded-plan.md` |
 | Official links index | Done | `docs/official-cursor-links.md` |
 | GitHub (public) | Done | `everytech-io/mobile-agentic-cursor-starter` |
 

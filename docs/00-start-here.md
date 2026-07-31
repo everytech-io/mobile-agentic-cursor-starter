@@ -43,6 +43,8 @@ VERIFY  → Xcode ⌘B and ⌘R — never skip this
 CAPTURE → One LEARNINGS.md entry
 ```
 
+4. Read [08-cursor-modes.md](08-cursor-modes.md) once you finish Week 1 — mode map for Plan / Debug / review.
+
 ## Day 1 (today)
 
 | Step | Link | Time |

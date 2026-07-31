@@ -48,4 +48,4 @@ Always remind learner to verify in Xcode after edits.
 
 Do [04-capture-learning.md](../exercises/04-capture-learning.md) after your next session.
 
-Next: [06-cursor-plus-xcode.md](06-cursor-plus-xcode.md)
+Next: [06-cursor-plus-xcode.md](06-cursor-plus-xcode.md) · Week 2: [08-cursor-modes.md](08-cursor-modes.md)
