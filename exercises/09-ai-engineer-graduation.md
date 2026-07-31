@@ -36,9 +36,8 @@ Open **that project's folder** in Cursor (or a dedicated branch). Copy pattern f
 | 2. CONTEXT | AGENTS.md + `@` relevant files **or** one skill |
 | 3. PLAN | Plan Mode for anything >1 file; save to `docs/plans/` |
 | 4. DELEGATE | Agent implements; you review every diff |
-| 5. VERIFY | **Non-Xcode verifier:** tests, curl, script run, linter, manual checklist |
-| 6. REVIEW | `/review-bugbot` or explicit review prompt |
-| 7. CAPTURE | LEARNINGS entry + skill update if agent repeated a mistake |
+| 5. VERIFY ∥ REVIEW | **Parallel:** automated verifier + human diff/path + `/review-bugbot` ([05](../docs/05-verify-loop.md), [14](../docs/14-verification-practices.md)) |
+| 6. CAPTURE | LEARNINGS entry + skill update if agent repeated a mistake |
 
 ---
 
@@ -78,6 +77,6 @@ Save plan to workspace when approved.
 - MCP server for a tool your team uses
 - Cloud Agent for long-running research branch
 - Subagent: planner (Fable) + executor split
-- Port `ios-verify` pattern → `backend-verify` skill
+- Port `verify-after-edit` pattern → `backend-verify` or domain-specific skill
 
 You are no longer learning Cursor for mobile. You are **operating as an AI engineer**.

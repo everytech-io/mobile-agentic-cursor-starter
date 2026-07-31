@@ -1,6 +1,6 @@
 # Day 1: Explore and edit
 
-Today you learn the minimum viable agent loop: **orient → one change → verify in Xcode**.
+Today you learn the minimum viable agent loop: **orient → one change → parallel verify**.
 
 Official Cursor path: [Quickstart — explain codebase](https://cursor.com/docs/get-started/quickstart)
 
@@ -27,9 +27,10 @@ Before asking for edits, paste a mini-spec:
 Improve the empty state when there are no habits.
 
 ## Done when
-- [ ] Builds in Xcode (⌘B)
-- [ ] Runs on simulator (⌘R)
-- [ ] Empty list shows helpful copy, not a blank screen
+- [ ] Named build verifier green (e.g. xcodebuild — document command)
+- [ ] Manual path: empty list shows helpful copy
+- [ ] Human: diff reviewed
+- [ ] Agent review: /review-bugbot on sample-app (parallel)
 
 ## Out of scope
 - Persistence, networking, new screens
@@ -46,24 +47,25 @@ While Agent works:
 - Watch the **diff** — reject hunks you do not understand
 - Do not accept "I'll fix it in a follow-up"
 
-## Part D — Verify in Xcode
+## Part D — Verify (parallel lanes)
 
-After Agent finishes:
+After Agent finishes, start **all lanes at once**:
 
-1. Switch to Xcode
-2. **⌘B** — build must succeed
-3. **⌘R** — run; delete all habits in the app (swipe) to test empty state
-4. Tap through once like a user, not like a developer
+1. **Automated:** run the verifier you named in done-when (e.g. `xcodebuild … build`)
+2. **Human:** read diff; walk manual path (empty state after delete all)
+3. **Agent review:** `/review-bugbot` on `sample-app/` — do not wait for build to finish before starting this
 
-If build fails, copy the **full error** from Xcode's Issue navigator into Agent:
+If build fails, paste **full verifier output** into Agent:
 
 ```
-Build failed. Here is the error from Xcode:
+Build failed:
 
-<paste>
+<paste command output>
 
 Fix only what's needed. Do not refactor unrelated files.
 ```
+
+See [05-verify-loop.md](05-verify-loop.md) · [14-verification-practices.md](14-verification-practices.md).
 
 ## Part E — Capture
 
@@ -80,7 +82,8 @@ Append to [LEARNINGS.md](../LEARNINGS.md):
 
 | Mistake | Fix |
 |---------|-----|
-| Never opened Xcode | Simulator is truth; Agent is draft |
+| No named verifier | Write the command in done-when |
+| Review only after manual test | Start Bugbot when diff exists |
 | Huge first prompt | One screen, one outcome |
 | Accepted diff blindly | Review like a PR |
 | No LEARNINGS entry | You will repeat the same failure |

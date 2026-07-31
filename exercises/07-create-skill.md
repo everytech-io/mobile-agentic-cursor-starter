@@ -6,37 +6,39 @@
 
 ## Task
 
-Create **`ios-verify`** skill scoped to the sample app:
+Create **`verify-after-edit`** skill (or extend the repo example):
 
 ```
 /create-skill
 
-Name: ios-verify
-Description: Run after editing StarterApp Swift files. Walks through Xcode verify and LEARNINGS capture.
-Paths: sample-app/**/*.swift
+Name: verify-after-edit
+Description: After agent edits, run parallel verification — automated verifier, human diff review, agent review.
+Paths: sample-app/**/*.swift  (or omit paths for project-wide)
 
 Steps for agent:
 1. Summarize files changed
-2. Remind learner: Xcode ⌘B then ⌘R
-3. If build fails, ask for pasted Xcode error before more edits
-4. Remind to append LEARNINGS.md
-5. Offer /review-bugbot on sample-app changes
+2. Lane 1 — remind learner to run named automated verifier from done-when
+3. Lane 2 — human reads diff + manual path
+4. Lane 3 — offer /review-bugbot in parallel (do not wait for lane 1)
+5. On failure, ask for full verifier output before more edits
+6. Remind LEARNINGS.md
 ```
+
+Reference: [.cursor/skills/verify-after-edit/SKILL.md](../.cursor/skills/verify-after-edit/SKILL.md)
 
 ## Review before commit
 
-- [ ] `.cursor/skills/ios-verify/SKILL.md` exists
+- [ ] `.cursor/skills/verify-after-edit/SKILL.md` exists (or your variant)
 - [ ] `name` matches folder
 - [ ] `description` says when to use it
-- [ ] `paths` scopes to sample-app
+- [ ] Skill encodes **parallel** lanes, not "Xcode only"
 
 ## Test
 
 New Agent chat:
 
 ```
-/swiftui-exercises
-/ios-verify
+/verify-after-edit
 
 I just finished editing HabitListView. What's next?
 ```
@@ -44,6 +46,7 @@ I just finished editing HabitListView. What's next?
 ## Done when
 
 - [ ] Skill invokes correctly
+- [ ] Mentions parallel human + agent review
 - [ ] Committed to git (optional: PR to everytech-io repo if forking)
 
 Next: [08-full-loop.md](08-full-loop.md)

@@ -18,7 +18,7 @@ Three-week arc: **sandbox (mobile) → agent ops → graduation on real work**.
 | 2 | [05-verify-loop](05-verify-loop.md), [13-context-engineering](13-context-engineering.md) | Finish 02 | Evidence > vibes |
 | 3 | [08-cursor-modes](08-cursor-modes.md), [03-plan-mode](03-plan-mode.md) | [03](../exercises/03-plan-feature.md) | PLAN before delegate |
 | 4 | [09-agents-md](09-agents-md.md), [04-rules-and-context](04-rules-and-context.md) | [04](../exercises/04-capture-learning.md), [06](../exercises/06-agents-md.md) | CONTEXT (AGENTS.md) |
-| 5 | [06-cursor-plus-xcode](06-cursor-plus-xcode.md) | Re-verify Ex 03 | Dual-app verify habit |
+| 5 | [14-verification-practices](14-verification-practices.md), [06-cursor-plus-xcode](06-cursor-plus-xcode.md) (optional sandbox) | Re-verify Ex 03 with parallel lanes |
 
 **Level 1 graduate:** runs agent with spec, verifies, captures LEARNINGS.
 

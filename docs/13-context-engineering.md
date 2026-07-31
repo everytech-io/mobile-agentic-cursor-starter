@@ -57,7 +57,7 @@ Official: [Customizing agents](https://cursor.com/learn/customizing-agents) · [
 ## Good vs bad context
 
 **Bad:** "Be smart about our codebase."  
-**Good:** "Minimum iOS 17. Verify with Xcode ⌘B/⌘R. See `@HabitListView.swift` for list patterns."
+**Good:** "Minimum iOS 17. Sandbox build: `xcodebuild -scheme StarterApp …`. Parallel: human diff + Bugbot. See `@HabitListView.swift` for list patterns."
 
 **Bad:** 200-line AGENTS.md with every Swift rule.  
 **Good:** 40-line AGENTS.md + `swiftui-exercises` skill scoped to `sample-app/`.

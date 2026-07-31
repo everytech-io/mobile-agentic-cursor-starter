@@ -14,15 +14,16 @@ cd mobile-agentic-cursor-starter
 cursor .
 ```
 
-## 3. Open the sample app in Xcode
+## 3. Optional: confirm StarterApp builds (sandbox)
+
+Exercises 01–08 use StarterApp as optional SwiftUI practice. You do **not** need Xcode as your end goal — only a named verifier if you touch the sandbox:
 
 ```bash
-open sample-app/StarterApp/StarterApp.xcodeproj
+cd sample-app/StarterApp
+xcodebuild -scheme StarterApp -destination 'platform=iOS Simulator,name=iPhone 16' build
 ```
 
-Select an iPhone simulator → **⌘R**. Confirm **StarterApp** launches.
-
-Keep Xcode open in the background for the rest of the course.
+Or open `StarterApp.xcodeproj` and ⌘R once to orient. See [06-cursor-plus-xcode.md](06-cursor-plus-xcode.md).
 
 ## 4. Learn the Agent shortcut
 
@@ -42,13 +43,13 @@ brew install swiftlint
 cd sample-app/StarterApp && swiftlint
 ```
 
-Not required for Day 1. We add verify checks in [05-verify-loop.md](05-verify-loop.md).
+Not required for Day 1. Verification habits: [05-verify-loop.md](05-verify-loop.md).
 
 ## Checklist
 
 - [ ] Cursor opens this repo as the workspace root (folder name in sidebar)
 - [ ] Agent panel opens with ⌘I
-- [ ] StarterApp runs in simulator
 - [ ] You know where `docs/`, `exercises/`, and `sample-app/` live
+- [ ] (Optional) One sandbox build command works
 
 Next: [Exercise 01 — Explore](../exercises/01-explore.md)

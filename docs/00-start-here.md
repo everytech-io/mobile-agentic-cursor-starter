@@ -2,43 +2,44 @@
 
 Read **[00-ai-engineer-mindset.md](00-ai-engineer-mindset.md) first** — this course trains **AI engineers**, not faster mobile devs. StarterApp is the sandbox.
 
-## Two apps (Week 1–2 sandbox)
+## One app for agent work
 
-| App | Role |
-|-----|------|
-| **Cursor** | Spec, context, delegate to agent, review |
-| **Xcode** | Verify iOS behavior — one verifier among many |
+| Tool | Role |
+|------|------|
+| **Cursor** | Spec, context, delegate, parallel verify + review |
 
-Week 3+: verifiers become tests, curl, scripts, PR checks — same loop.
+StarterApp (Exercises 01–08) is optional SwiftUI practice. **Verify with named commands** — tests, `xcodebuild`, scripts — not "Xcode as the product."
+
+Week 3+: your repo, your verifiers. See [14-verification-practices.md](14-verification-practices.md).
 
 ## Before you begin
 
 - [ ] [AI engineer mindset](00-ai-engineer-mindset.md)
 - [ ] [Competency map](12-ai-engineer-competencies.md) — skim levels 0→3
 - [ ] [Watch Cursor Learn](00-watch-first.md)
-- [ ] Cursor + Xcode installed; repo open in Cursor
-- [ ] `open sample-app/StarterApp/StarterApp.xcodeproj` → **⌘R** once
+- [ ] Cursor installed; repo open in Cursor
+- [ ] (Optional sandbox) `xcodebuild` or run StarterApp once — see [06-cursor-plus-xcode.md](06-cursor-plus-xcode.md)
 
 ## AI engineer loop (every session)
 
 ```
-SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 ```
 
-| Step | This week (mobile sandbox) |
-|------|----------------------------|
+| Step | Practice |
+|------|----------|
 | SPEC | Exercise done-when |
 | CONTEXT | AGENTS.md, `@sample-app/`, skills |
 | PLAN | Shift+Tab for multi-file |
 | DELEGATE | Agent mode |
-| VERIFY | Xcode ⌘B / ⌘R |
-| REVIEW | `/review-bugbot` |
+| VERIFY | Automated + human (parallel lanes) |
+| REVIEW | `/review-bugbot` (same time as verify) |
 | CAPTURE | LEARNINGS.md |
 
 ## How to use this repo
 
 1. Mindset + competencies (above)
-2. Docs `01` → `06`, then `08`–`13` as syllabus dictates
+2. Docs `01` → `06`, then `08`–`14` as syllabus dictates
 3. Exercises same day as reading
 4. **Week 3:** [Exercise 09](../exercises/09-ai-engineer-graduation.md) on non-mobile work
 
@@ -57,4 +58,4 @@ You are not the typist. You are the **engineer who owns spec, context, verificat
 
 The agent is fast and confident and wrong without you.
 
-Next: [13-context-engineering.md](13-context-engineering.md) after Week 1 · [01-install-and-open.md](01-install-and-open.md) now
+Next: [14-verification-practices.md](14-verification-practices.md) · [01-install-and-open.md](01-install-and-open.md)

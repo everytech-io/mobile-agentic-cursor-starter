@@ -13,7 +13,7 @@ Switch modes: **mode picker** in Agent input, or **Shift+Tab** to rotate.
 | **Plan** | Multi-file feature, unclear scope, architecture choice | After you approve plan | Day 3+ |
 | **Debug** | Bug reproduces but cause unclear; need runtime evidence | Yes (instrument → fix → cleanup) | Week 2 |
 
-**Verify always happens in Xcode** for iOS — regardless of mode.
+**Verify runs in parallel** after every delegate step — automated + human + agent review. See [05-verify-loop.md](05-verify-loop.md).
 
 ## Ask Mode
 
@@ -36,8 +36,8 @@ The four beats ([Working with agents](https://cursor.com/learn/working-with-agen
 
 1. **Plan** (mental or mini-spec in prompt)
 2. **Act** (edits)
-3. **Verify** (you: Xcode ⌘B/⌘R)
-4. **Hand back** (review diff, LEARNINGS)
+3. **Verify ∥ Review** (parallel: automated + human diff + Bugbot)
+4. **Hand back** (LEARNINGS)
 
 ## Plan Mode
 
@@ -61,13 +61,13 @@ Best for:
 - Timing / async / state bugs
 - "It used to work" regressions
 
-**Not** for: typos, missing imports, "forgot to call super" — use Agent + Xcode error paste.
+**Not** for: typos, missing imports — use Agent + paste verifier output.
 
 See [11-debug-and-review.md](11-debug-and-review.md) and [Exercise 05](../exercises/05-debug-mode.md).
 
 ## Agent Review / Bugbot (review, not a mode)
 
-Before merging or marking an exercise done, ask for review:
+Before merging or marking an exercise done, run **in parallel** with your other verifiers:
 
 ```
 /review-bugbot

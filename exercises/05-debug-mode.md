@@ -27,7 +27,7 @@ Actual: (describe what you see)
 
 @HabitListView.swift @HabitStore.swift
 
-Hypothesize, instrument if useful, fix minimally, verify in Xcode, remove debug logs.
+Hypothesize, instrument if useful, fix minimally, parallel verify (build + manual repro + Bugbot), remove debug logs.
 ```
 
 ## Steps

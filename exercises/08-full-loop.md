@@ -2,7 +2,7 @@
 
 **Goal:** Route modes correctly on one small feature end-to-end.  
 **Time:** ~90 min  
-**Read first:** [docs/08-cursor-modes.md](../docs/08-cursor-modes.md)
+**Read first:** [docs/08-cursor-modes.md](../docs/08-cursor-modes.md), [docs/14-verification-practices.md](../docs/14-verification-practices.md)
 
 ## Feature (pick one)
 
@@ -17,9 +17,8 @@
 | 1 | **Ask** | Explore where date/formatting or alert logic should live |
 | 2 | **Plan** | Write plan; save to workspace under `docs/plans/` |
 | 3 | **Agent** | Implement approved plan only |
-| 4 | **Xcode** | ⌘B / ⌘R — manual verify |
-| 5 | **Review** | `/review-bugbot` on `sample-app/` changes |
-| 6 | **Capture** | LEARNINGS + update AGENTS.md or skill if agent repeated a mistake |
+| 4 | **Verify ∥ Review** | Parallel: automated verifier + human diff/path + `/review-bugbot` |
+| 5 | **Capture** | LEARNINGS + update AGENTS.md or skill if agent repeated a mistake |
 
 ## Plan prompt template
 
@@ -29,8 +28,9 @@ Plan Mode:
 Feature: <A or B from above>
 
 Done when:
-- [ ] Xcode build + run pass
+- [ ] Named automated verifier green (document command)
 - [ ] Manual test path documented
+- [ ] Human diff review + Bugbot (parallel)
 - [ ] No new dependencies
 
 Save plan to workspace when approved.
@@ -39,10 +39,10 @@ Save plan to workspace when approved.
 
 ## Done when (capstone checklist)
 
-- [ ] Used Ask, Plan, Agent, and review in one session
+- [ ] Used Ask, Plan, Agent, and parallel verify+review in one session
 - [ ] Plan file exists in `docs/plans/`
-- [ ] `/review-bugbot` run (or documented why skipped)
+- [ ] `/review-bugbot` run in parallel with other verifiers
 - [ ] 4+ total LEARNINGS entries in repo
 - [ ] Can explain mode map from [08-cursor-modes.md](../docs/08-cursor-modes.md) without notes
 
-**Graduation:** Apply same loop on your own app — copy AGENTS.md + skills folder.
+**Not graduation yet** — Week 3 [Exercise 09](09-ai-engineer-graduation.md) on **your real stack** with non-sandbox verifiers.

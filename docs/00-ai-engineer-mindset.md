@@ -28,7 +28,7 @@ You are not becoming a "prompt engineer." You are becoming someone who **operate
 1. **Writes specs agents can execute** — goal, done-when, out-of-scope (not vibes)
 2. **Engineers context** — AGENTS.md, skills, `@` pins, saved plans in git
 3. **Routes work to the right mode** — Ask / Plan / Agent / Debug / review ([08-cursor-modes.md](08-cursor-modes.md))
-4. **Verifies like ops** — cheap checks first, expensive agent second, **human gate before trust**
+4. **Verifies in parallel** — automated + human diff review + agent review at the same time; **evidence before trust**
 5. **Captures learnings** — agents forget; **LEARNINGS.md and skills** don't
 6. **Closes the loop** — spec → plan → code → verify → ticket/deploy ([user's security arc pattern](https://cursor.com/learn/creating-features))
 7. **Knows domain beats model** — the agent doesn't know your BSS, your QBS index, your SwiftUI deployment target; **you do**
@@ -40,8 +40,10 @@ StarterApp is **Week 1 gym equipment**. Week 3+ is your real codebase, APIs, scr
 ## The AI engineer loop (memorize this)
 
 ```
-SPEC → CONTEXT → [PLAN] → DELEGATE (agent) → VERIFY → REVIEW → CAPTURE → REPEAT
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE → REPEAT
 ```
+
+VERIFY and REVIEW run **in parallel** after the diff exists — do not serialize them.
 
 | Step | Artifact |
 |------|----------|
@@ -49,8 +51,8 @@ SPEC → CONTEXT → [PLAN] → DELEGATE (agent) → VERIFY → REVIEW → CAPTU
 | CONTEXT | AGENTS.md + skills + `@files` |
 | PLAN | Plan Mode output in `docs/plans/` |
 | DELEGATE | Agent / subagent / MCP tool |
-| VERIFY | Xcode, tests, lint, logs — **evidence** |
-| REVIEW | `/review-bugbot`, agent review |
+| VERIFY | Tests, scripts, curl, lint, logs — **evidence** (human lane included) |
+| REVIEW | `/review-bugbot` or review prompt — **parallel with verify** |
 | CAPTURE | LEARNINGS.md → skill when pattern repeats |
 
 ---
@@ -59,8 +61,8 @@ SPEC → CONTEXT → [PLAN] → DELEGATE (agent) → VERIFY → REVIEW → CAPTU
 
 | Week | You become capable of… | Sandbox |
 |------|------------------------|---------|
-| **1** | Agent loop + verify discipline | StarterApp + Xcode |
-| **2** | Modes, AGENTS.md, skills, Debug, review | Same app, richer agent ops |
+| **1** | Agent loop + parallel verify | StarterApp sandbox (any verifier you choose) |
+| **2** | Modes, AGENTS.md, skills, Debug, review | Same sandbox, richer agent ops |
 | **3** | **Transfer** — same loop on *your* work | Your repo / API / script / ticket |
 
 Week 3 is where "AI engineer" becomes real. See [12-ai-engineer-competencies.md](12-ai-engineer-competencies.md) and [Exercise 09](../exercises/09-ai-engineer-graduation.md).

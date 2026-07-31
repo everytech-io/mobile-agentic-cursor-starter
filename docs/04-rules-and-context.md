@@ -41,7 +41,7 @@ Example skill addition:
 /create-skill
 
 When editing SwiftUI in sample-app/, never use NavigationView.
-Always remind learner to verify in Xcode after edits.
+Always remind learner to run **parallel verify** after edits ([14-verification-practices.md](14-verification-practices.md)).
 ```
 
 ## Exercise

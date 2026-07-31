@@ -10,4 +10,4 @@ paths: sample-app/**/*.swift
 - Never use `NavigationView`, `ObservableObject`, or `@Published` in new code.
 - Keep views under ~150 lines; extract subviews when needed.
 - No third-party packages unless the exercise asks.
-- After edits, remind the learner to verify in **Xcode** (⌘B build, ⌘R run).
+- After edits, remind **parallel verify**: named automated command + human diff + `/review-bugbot` ([05-verify-loop.md](../../docs/05-verify-loop.md)).

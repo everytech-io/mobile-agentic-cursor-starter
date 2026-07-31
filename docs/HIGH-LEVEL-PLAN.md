@@ -25,7 +25,7 @@ You are **not** implementing code yet. Your job:
 Transition **rusty mobile developers** into **AI engineers**:
 
 ```
-SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 ```
 
 StarterApp = Week 1–2 sandbox. Week 3 = same loop on learner's **non-mobile** work ([Exercise 09](../exercises/09-ai-engineer-graduation.md)).
@@ -67,7 +67,8 @@ Mindset: [00-ai-engineer-mindset.md](00-ai-engineer-mindset.md) · Competencies:
 ### Phase 0 — Pre-flight (learner, ~30 min)
 
 - [ ] Watch/read [00-watch-first.md](00-watch-first.md) (Cursor Learn: Agents + Working with agents)
-- [ ] Install Cursor + Xcode; clone repo; run StarterApp once (⌘R)
+- [ ] Install Cursor; clone repo; read [14-verification-practices.md](14-verification-practices.md)
+- [ ] (Optional sandbox) one `xcodebuild` or simulator run — not required for graduation
 
 **Planner deliverable:** Confirm prerequisites checklist; add troubleshooting FAQ if gaps found.
 
@@ -77,11 +78,11 @@ Mindset: [00-ai-engineer-mindset.md](00-ai-engineer-mindset.md) · Competencies:
 
 | Day | Focus | Exercise | Verify gate |
 |-----|-------|----------|-------------|
-| 1 | Orient + one edit | 01, 02 | Xcode ⌘B/⌘R |
-| 2 | Verify discipline | 02 finish | LEARNINGS #1 |
-| 3 | Plan Mode | 03 | Detail screen works |
-| 4 | AGENTS.md + skills | 04 | 3× LEARNINGS |
-| 5 | Dual-app ritual | 06 | Cold verify Ex 03 |
+| 1 | Orient + one edit | 01, 02 | Parallel verify + LEARNINGS |
+| 2 | Verify discipline | 02 finish | Named verifier + Bugbot |
+| 3 | Plan Mode | 03 | Detail screen + parallel verify |
+| 4 | AGENTS.md + skills | 04, 06 | verify ritual in AGENTS.md |
+| 5 | Verification practices | 14, 06 | Re-verify Ex 03 (parallel lanes) |
 
 **Planner deliverable:** Mentor runbook (1-pager), rubric for "done", common failure modes + fixes.
 
@@ -127,7 +128,8 @@ See [07-week-1-syllabus.md](07-week-1-syllabus.md) Week 2.
 
 ## Constraints (non-negotiable)
 
-- **Xcode is source of truth** for iOS verify — never skip ⌘R in Week 1.
+- **Parallel verify** — automated + human + agent review after every delegate step ([14-verification-practices.md](14-verification-practices.md)).
+- **Xcode is not the end goal** — sandbox optional; graduation uses learner's real verifiers.
 - **No rules-first** — prefer `AGENTS.md` + skills; rules only for org compliance.
 - **Minimal sample app** — exercises teach workflow, not architecture.
 - **No secrets** in repo; no production APIs in sample app.

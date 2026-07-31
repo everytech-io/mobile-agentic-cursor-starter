@@ -13,7 +13,7 @@ Official backdrop: [What is agentic coding?](https://cursor.com/help/ai-features
 | C1 | **Spec writing** | No | Every exercise starts with goal / done-when / out-of-scope |
 | C2 | **Context engineering** | No | AGENTS.md, skills, `@` mentions ([09](09-agents-md.md), [10](10-skills.md), [13](13-context-engineering.md)) |
 | C3 | **Mode routing** | No | Ask vs Plan vs Agent vs Debug ([08](08-cursor-modes.md)) |
-| C4 | **Verification discipline** | No (Xcode is one verifier) | ⌘B/⌘R + paste errors back ([05](05-verify-loop.md)) |
+| C4 | **Verification discipline** | No | Parallel lanes: automated + human + agent review ([05](05-verify-loop.md), [14](14-verification-practices.md)) |
 | C5 | **Review gates** | No | `/review-bugbot` before "done" ([11](11-debug-and-review.md)) |
 | C6 | **Durable memory** | No | LEARNINGS.md → skill when repeat ([04](04-rules-and-context.md)) |
 | C7 | **Plan before multi-step work** | No | Plan Mode + saved plans ([03](03-plan-mode.md)) |
@@ -21,7 +21,7 @@ Official backdrop: [What is agentic coding?](https://cursor.com/help/ai-features
 | C9 | **Domain authority** | No | You catch wrong APIs; agent doesn't ([00-ai-engineer-mindset](00-ai-engineer-mindset.md)) |
 | C10 | **Transfer to non-mobile work** | **Graduation** | [Exercise 09](../exercises/09-ai-engineer-graduation.md) |
 
-**Mobile (SwiftUI, Xcode)** covers C4 on iOS only. **C1–C3, C5–C10** transfer to backend, data, DevOps, telco, content pipelines.
+| C4 on sandbox only | StarterApp optional — graduation uses **your** verifiers |
 
 ---
 
@@ -31,7 +31,7 @@ Official backdrop: [What is agentic coding?](https://cursor.com/help/ai-features
 Uses AI for snippets. No spec. No verify ritual. Same mistakes every session.
 
 ### Level 1 — Agent operator (Week 1 graduate)
-Runs Agent with mini-spec. Reviews diffs. Verifies in Xcode. Writes LEARNINGS.
+Runs Agent with mini-spec. Parallel verify (automated + human + review). Writes LEARNINGS.
 
 ### Level 2 — Context engineer (Week 2 graduate)
 Maintains AGENTS.md + skills. Uses Plan and Debug modes. Runs review before done.

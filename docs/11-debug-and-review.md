@@ -10,7 +10,7 @@ Debug Mode is for bugs where **reading code is not enough** — you need runtime
 
 1. **Hypothesize** — agent explores code, lists possible causes
 2. **Instrument** — adds logging (Cursor debug extension captures runtime)
-3. **You reproduce** — follow agent steps in simulator
+3. **You reproduce** — follow agent steps (simulator, server, script — whatever your task uses)
 4. **Analyze logs** — agent reads evidence
 5. **Targeted fix** — small diff, not a rewrite
 6. **Verify + cleanup** — confirm fix; agent removes instrumentation
@@ -19,11 +19,11 @@ Debug Mode is for bugs where **reading code is not enough** — you need runtime
 
 Mode picker → **Debug**, or **Shift+Tab** until Debug.
 
-### iOS + Debug Mode notes
+### Sandbox notes (StarterApp)
 
-- Reproduction happens in **Xcode simulator** (⌘R)
-- Paste **Xcode console output** if Debug instrumentation is limited for SwiftUI
-- For compile errors, skip Debug — paste build error into Agent
+- Reproduction may use simulator or `xcodebuild` — optional for this course
+- Paste **runtime log output** if instrumentation is limited
+- For compile errors, skip Debug — paste build/test output into Agent
 
 ### Good Debug prompt
 
@@ -46,21 +46,21 @@ See [Exercise 05](../exercises/05-debug-mode.md).
 
 ---
 
-## Agent Review and Bugbot
+## Agent Review and Bugbot (parallel lane)
 
 Official: [Agent review](https://cursor.com/docs/agent/agent-review) · [Bugbot](https://cursor.com/docs/bugbot)
 
-**Review is not implementation** — it is a gate before you trust the diff.
+**Review runs in parallel with verify** — start when the diff exists, not after all manual tests finish.
 
 ### When to review
 
-- After Exercise 02–03 before marking done
+- As soon as Agent/Plan produces a diff
 - Before opening a PR on your real app
-- After Plan Mode build completes
+- Same session as automated tests and human diff read
 
 ### `/review-bugbot`
 
-In Agent chat:
+In Agent chat (while tests run or you read the diff):
 
 ```
 /review-bugbot
@@ -70,20 +70,21 @@ Look for: SwiftUI state bugs, missing @MainActor, NavigationStack mistakes, dele
 List findings by severity. Do not fix unless I ask.
 ```
 
-### Manual review checklist (mobile)
+### Parallel checklist (all lanes)
 
-- [ ] Diff only touches expected files
-- [ ] No `NavigationView` / `ObservableObject` slipped in
-- [ ] Xcode ⌘B clean
-- [ ] Manual test path from exercise spec
-- [ ] LEARNINGS.md updated
+| Lane | Check |
+|------|-------|
+| **Human** | Diff only touches expected files; manual done-when path |
+| **Automated** | Named verifier green (test / build / lint — paste output if red) |
+| **Agent review** | Bugbot findings triaged |
+| **Capture** | LEARNINGS.md updated |
 
 ### Debug vs Bugbot
 
 | | Debug Mode | Bugbot / review |
 |---|------------|-----------------|
 | Goal | Find root cause of repro bug | Find defects in written code |
-| You do | Reproduce bug | Read findings |
+| You do | Reproduce bug | Read findings (parallel with other verify) |
 | Output | Fix + cleanup | Report (optional fixes) |
 
-Next: [08-cursor-modes.md](08-cursor-modes.md) (mode map) · [Exercise 08](../exercises/08-full-loop.md)
+Next: [14-verification-practices.md](14-verification-practices.md) · [08-cursor-modes.md](08-cursor-modes.md)

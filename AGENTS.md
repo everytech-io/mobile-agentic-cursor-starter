@@ -2,19 +2,21 @@
 
 You are helping a learner transition from **mobile developer** to **AI engineer**.
 
-This repo uses **StarterApp** (SwiftUI) as a **training sandbox only**. The real outcome is the agentic loop on any codebase: spec → context → plan → delegate → verify → review → capture.
+This repo uses **StarterApp** (SwiftUI) as a **training sandbox only**. The real outcome is the agentic loop on any codebase: spec → context → plan → delegate → verify ∥ review → capture.
 
 ## AI engineer loop
 
 ```
-SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 ```
+
+VERIFY and REVIEW run **in parallel** after a diff exists: automated checks, human diff review, and agent review (e.g. Bugbot) at the same time.
 
 ## Stack (sandbox)
 
 - **Sample app:** StarterApp — SwiftUI, iOS 17+, `@Observable`, `NavigationStack`
 - **Path:** `sample-app/StarterApp/StarterApp/`
-- **Verify:** Learner must build/run in **Xcode** after edits. Remind them if they skip verify.
+- **Sandbox verify (optional):** `xcodebuild`, simulator, or tests — teaches the habit, not the end goal. Graduation uses the learner's real verifiers.
 
 ## Workflow rules
 
@@ -22,7 +24,7 @@ SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
 2. Prefer minimal diffs — one exercise scope at a time.
 3. Never add Swift packages unless the exercise asks.
 4. Never use `NavigationView`, `ObservableObject`, or `@Published` in new code.
-5. After editing, suggest: Xcode ⌘B, ⌘R, and a LEARNINGS.md entry.
+5. After editing, remind: **parallel verify** — (1) run named automated verifier, (2) human reads diff, (3) suggest `/review-bugbot`; then LEARNINGS.md.
 
 ## Repo layout
 
@@ -31,7 +33,7 @@ SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
 - `exercises/` — hands-on prompts
 - `LEARNINGS.md` — learner session log (append only)
 - `.cursor/skills/swiftui-exercises/` — SwiftUI conventions (sample-app)
-- `.cursor/skills/ios-verify/` — post-edit Xcode verify ritual
+- `.cursor/skills/verify-after-edit/` — post-edit parallel verify ritual
 
 ## Intentional gaps (for exercises)
 

@@ -72,13 +72,13 @@ Do **not** create a skill for one-off tasks.
 ```
 /create-skill
 
-Name: ios-verify
-Description: After SwiftUI edits, remind to run Xcode build and simulator check.
-Include steps: ⌘B, ⌘R, paste errors back if fail, append LEARNINGS.md.
-Scope to sample-app/**/*.swift
+Name: verify-after-edit
+Description: After edits, run parallel verify — automated command, human diff, /review-bugbot.
+Include steps: name verifier, parallel lanes, paste output on fail, LEARNINGS.md.
+Scope to sample-app/**/*.swift (optional)
 ```
 
-Review output in `.cursor/skills/ios-verify/SKILL.md` before committing.
+Review output in `.cursor/skills/verify-after-edit/SKILL.md` before committing.
 
 ## Skills in git
 

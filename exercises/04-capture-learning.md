@@ -15,7 +15,7 @@ Template:
 ```markdown
 ## YYYY-MM-DD — Week 1 reflection
 - Biggest surprise about Agent:
-- Biggest surprise about Xcode verify:
+- Biggest surprise about parallel verify:
 - One thing I'll always do from now on:
 ```
 
@@ -32,7 +32,7 @@ If Agent made the same mistake twice, ask:
 /create-skill
 
 When editing SwiftUI under sample-app/, never use NavigationView.
-Remind me to verify in Xcode after edits.
+Remind me to run parallel verify after edits (see docs/05-verify-loop.md).
 ```
 
 Review the generated skill before keeping it.

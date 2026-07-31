@@ -12,7 +12,9 @@ Plan Mode: Add a habit detail screen to StarterApp.
 ## Done when
 - [ ] Tap habit row → detail screen with title, streak, created date
 - [ ] Back navigation works (NavigationStack)
-- [ ] Xcode ⌘B / ⌘R pass
+- [ ] Named build verifier green (document command)
+- [ ] Manual path: tap habit → detail → back
+- [ ] Parallel: human diff + `/review-bugbot` on sample-app
 - [ ] iOS 17+, @Observable HabitStore, no new dependencies
 
 ## Out of scope
@@ -27,7 +29,7 @@ Plan Mode: Add a habit detail screen to StarterApp.
 3. Answer Agent questions (keep scope tight)
 4. Review plan — edit if it adds unnecessary architecture
 5. Approve build
-6. Verify in Xcode: tap each habit, back, rotate if you care about layout
+6. **Parallel verify:** automated build + human path + Bugbot (see [05-verify-loop.md](../docs/05-verify-loop.md))
 
 ## Common failures
 

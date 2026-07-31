@@ -1,8 +1,8 @@
 # Exercise 02 — Small verified change
 
-**Goal:** One Agent edit, verified in Xcode.  
+**Goal:** One Agent edit, **parallel verify**.  
 **Time:** ~30–45 minutes  
-**Read first:** [docs/02-day-1-explore-and-edit.md](../docs/02-day-1-explore-and-edit.md)
+**Read first:** [docs/02-day-1-explore-and-edit.md](../docs/02-day-1-explore-and-edit.md), [docs/05-verify-loop.md](../docs/05-verify-loop.md)
 
 ## Spec (paste into Agent first)
 
@@ -11,10 +11,10 @@
 When StarterApp has zero habits, show a friendly empty state with title and subtitle instead of a blank list.
 
 ## Done when
-- [ ] Xcode ⌘B succeeds
-- [ ] Xcode ⌘R — deleting all habits shows the empty state
-- [ ] Copy is clear for a habit tracker app
-- [ ] Only SwiftUI files under sample-app/StarterApp/ changed
+- [ ] Sandbox build succeeds (`xcodebuild` or your chosen verifier — name the command)
+- [ ] Manual path: deleting all habits shows the empty state
+- [ ] Human: diff reviewed — only SwiftUI files under sample-app/ changed
+- [ ] Agent review: `/review-bugbot` run on sample-app (parallel with build)
 
 ## Out of scope
 - Core Data / SwiftData
@@ -32,15 +32,17 @@ Use iOS 17 APIs. Match existing code style.
 
 Adjust `@` paths to match actual filenames if needed.
 
-## Verify
+## Verify (parallel lanes)
 
-1. **⌘B** in Xcode
-2. **⌘R** — add habits, delete all, confirm empty state
-3. Review diff — reject unrelated files
+Start all at once when the diff is ready:
+
+1. **Automated:** `xcodebuild -scheme StarterApp -destination 'platform=iOS Simulator,name=iPhone 16' build` (or sandbox verifier you named)
+2. **Human:** read diff; run manual empty-state path
+3. **Agent review:** `/review-bugbot` on `sample-app/`
 
 ## If build fails
 
-Paste full Xcode error. Ask for minimal fix only.
+Paste full verifier output. Ask for minimal fix only.
 
 ## Capture
 
@@ -53,4 +55,4 @@ Append to [LEARNINGS.md](../LEARNINGS.md):
 - Rule for next time:
 ```
 
-Next: [03-plan-feature.md](03-plan-feature.md) (after [docs/05-verify-loop.md](../docs/05-verify-loop.md))
+Next: [03-plan-feature.md](03-plan-feature.md)

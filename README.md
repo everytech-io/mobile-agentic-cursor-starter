@@ -9,7 +9,7 @@
 | Phase | You learn |
 |-------|-----------|
 | **Mindset** | Mobile dev → AI engineer identity ([mindset doc](docs/00-ai-engineer-mindset.md)) |
-| **Week 1–2** | Spec, context, modes, skills, Plan, Debug, review — via Cursor + Xcode |
+| **Week 1–2** | Spec, context, modes, skills, Plan, Debug, parallel verify — via StarterApp sandbox |
 | **Week 3** | Transfer loop to non-mobile work ([graduation exercise](exercises/09-ai-engineer-graduation.md)) |
 
 ## Start here
@@ -30,17 +30,17 @@ cursor .
 ## AI engineer loop
 
 ```
-SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 ```
 
 | Layer | Tools |
 |-------|--------|
 | Context | AGENTS.md, skills, `@`, LEARNINGS, plans in git |
 | Delegate | Ask / Agent / Plan / Debug, MCP (Week 3+) |
-| Verify | Xcode (sandbox), then tests/scripts/PR on real work |
-| Review | `/review-bugbot`, agent review |
+| Verify | Tests, scripts, curl, lint, build — **parallel** human + agent review |
+| Review | `/review-bugbot`, review prompt (runs alongside verify, not after) |
 
-Deep dive: [Context engineering](docs/13-context-engineering.md)
+Deep dive: [Verification practices](docs/14-verification-practices.md) · [Verify loop](docs/05-verify-loop.md)
 
 ## Docs map
 
@@ -49,6 +49,7 @@ Deep dive: [Context engineering](docs/13-context-engineering.md)
 | Mindset shift | [00-ai-engineer-mindset](docs/00-ai-engineer-mindset.md) |
 | Competencies + rubric | [12-ai-engineer-competencies](docs/12-ai-engineer-competencies.md) |
 | Context engineering | [13-context-engineering](docs/13-context-engineering.md) |
+| Verification (parallel lanes) | [14-verification-practices](docs/14-verification-practices.md), [05-verify-loop](docs/05-verify-loop.md) |
 | Modes | [08-cursor-modes](docs/08-cursor-modes.md) |
 | AGENTS.md | [09-agents-md](docs/09-agents-md.md) |
 | Skills | [10-skills](docs/10-skills.md) |

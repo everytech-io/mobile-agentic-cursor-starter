@@ -14,10 +14,10 @@ This repo's live example: [AGENTS.md](../AGENTS.md)
 
 | Include | Example |
 |---------|---------|
-| Stack + deployment target | iOS 17, SwiftUI, Xcode verify |
+| Stack + deployment target | iOS 17, SwiftUI (sandbox) |
 | Folder map | where sample app, docs, exercises live |
-| Commands | `open StarterApp.xcodeproj`, optional `swiftlint` |
-| Workflow rules | verify in Xcode after edits |
+| Commands | named verify commands: `pytest`, `npm test`, `xcodebuild`, `curl …` |
+| Workflow rules | parallel verify after edits ([14-verification-practices.md](14-verification-practices.md)) |
 | Intentional gaps | do not "fix" exercise gaps early |
 | Out of scope | no new packages without exercise |
 
@@ -63,17 +63,17 @@ More specific wins on conflict. For this course, root `AGENTS.md` is enough.
 # Project instructions for Cursor Agent
 
 ## Stack
-- Platform: iOS 17+, SwiftUI
-- Verify: Xcode ⌘B / ⌘R after every agent edit
+- Platform: your stack (backend, script, mobile sandbox, etc.)
+- Verify: name commands in this file — tests, lint, curl, build. Run human + agent review in parallel.
 
 ## Layout
-- `Sources/` — app code
-- `Tests/` — unit tests
+- `src/` — app code
+- `tests/` — automated verifiers
 
 ## Rules
-- Match existing architecture in @MainView.swift
-- No new SPM dependencies without asking
-- Run tests before hand-back
+- Match existing architecture in @main module file
+- No new dependencies without asking
+- Parallel verify before hand-back (automated + human diff + review)
 
 ## Out of scope
 - Backend / CI changes unless ticket says so

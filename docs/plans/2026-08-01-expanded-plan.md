@@ -9,7 +9,7 @@ Transition rusty mobile developers into **AI engineers** — not "Cursor for iOS
 
 | Week | Role | Where |
 |------|------|-------|
-| 1–2 | Learn loop + context on **StarterApp sandbox** | SwiftUI + Xcode verify |
+| 1–2 | Learn loop + context on **StarterApp sandbox** | Optional `xcodebuild`; parallel verify habit |
 | 3 | **Graduate** — same loop on real non-mobile work | Their repo / API / script / ticket |
 
 Core loop:
@@ -41,7 +41,7 @@ Sandbox only. Competencies: **C1 spec, C4 verify, C9 domain catch**.
 | Milestone | Acceptance |
 |-----------|------------|
 | Mindset + watch-first | Can explain mobile vs AI engineer table |
-| Ex 01–02 | SPEC + Xcode verify + LEARNINGS |
+| Ex 01–02 | SPEC + parallel verify + LEARNINGS |
 | Ex 03 | Plan Mode multi-file |
 | Ex 04, 06 | AGENTS.md extended |
 
@@ -53,7 +53,7 @@ Competencies: **C2 context, C3 modes, C5 review, C6 memory, C7 plan, C8 debug**.
 
 | Milestone | Acceptance |
 |-----------|------------|
-| Ex 07 | Custom or ios-verify skill |
+| Ex 07 | Custom or verify-after-edit skill |
 | Ex 05 | Debug workflow |
 | Ex 08 | Ask → Plan → Agent → review |
 | Bugbot | Run once on sample-app diff |
@@ -68,7 +68,7 @@ Competency: **C10 transfer**.
 |-----------|------------|
 | AGENTS.md copied to learner project | Not tutorial repo only |
 | Ex 09 complete | **Non-mobile** task with verifier evidence |
-| Verifier | Tests / curl / script / PR — not only Xcode |
+| Verifier | Tests / curl / script / PR — parallel human + agent review |
 | Can teach context stack | 5-min explanation without notes |
 
 Options for Ex 09: script, API, docs, ticket, MCP read-only query.
@@ -115,7 +115,7 @@ StarterApp is **gym**. Week 3 is **the job**.
 | Level 1 (Week 1) | ≥ 70% complete Ex 1–4 |
 | Level 2 (Week 2) | ≥ 50% complete Ex 5–8 |
 | **Level 3 (Week 3)** | ≥ 40% complete **Ex 09** |
-| Ex 09 with non-Xcode verifier | 100% of Level 3 |
+| Ex 09 with task-appropriate verifier | 100% of Level 3 |
 
 ---
 

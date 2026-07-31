@@ -25,7 +25,7 @@ Max 12 bullets.
 ```
 
 4. Open each file Agent mentions. Confirm paths exist — **do not trust paths you haven't clicked**.
-5. In Xcode, run the app (**⌘R**). Match Agent's description to what you see.
+5. (Optional) Run StarterApp once — `xcodebuild` or simulator — to match Agent's description to runtime.
 
 ## Success criteria
 
