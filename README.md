@@ -1,15 +1,18 @@
-# Mobile Agentic Cursor Starter
+# Mobile → AI Engineer
 
-**EveryTech** — full guided path for rusty mobile developers: **AGENTS.md, Skills, Plan Mode, Debug Mode, Bugbot review**, and Xcode verify.
+**EveryTech** — transition **rusty mobile developers** into **AI engineers** who spec, engineer context, delegate to agents, verify with evidence, and ship — not just write screens faster.
 
 [![EveryTech](https://img.shields.io/badge/org-everytech--io-blue)](https://github.com/everytech-io)
 
-| Tool | Role |
-|------|------|
-| **Cursor** | Ask / Agent / Plan / Debug, skills, AGENTS.md, review |
-| **Xcode** | Build, run, debug — source of truth |
+**StarterApp (SwiftUI)** is the Week 1–2 sandbox. **Week 3 graduation** is the same agentic loop on *your* real work (API, scripts, tickets, MCP).
 
-## Quick start
+| Phase | You learn |
+|-------|-----------|
+| **Mindset** | Mobile dev → AI engineer identity ([mindset doc](docs/00-ai-engineer-mindset.md)) |
+| **Week 1–2** | Spec, context, modes, skills, Plan, Debug, review — via Cursor + Xcode |
+| **Week 3** | Transfer loop to non-mobile work ([graduation exercise](exercises/09-ai-engineer-graduation.md)) |
+
+## Start here
 
 ```bash
 git clone https://github.com/everytech-io/mobile-agentic-cursor-starter.git
@@ -17,50 +20,55 @@ cd mobile-agentic-cursor-starter
 cursor .
 ```
 
-1. [Watch first — Cursor Learn](docs/00-watch-first.md) (~15 min)
-2. [Start here](docs/00-start-here.md)
-3. `open sample-app/StarterApp/StarterApp.xcodeproj` → **⌘R**
-4. [Exercise 01](exercises/01-explore.md)
+1. **[AI engineer mindset](docs/00-ai-engineer-mindset.md)** — read this first
+2. [Watch — Cursor Learn](docs/00-watch-first.md)
+3. [Day 1 mechanics](docs/00-start-here.md)
+4. [Competency map](docs/12-ai-engineer-competencies.md)
 
-**Full syllabus (2 weeks):** [docs/07-week-1-syllabus.md](docs/07-week-1-syllabus.md)
+**Syllabus:** [docs/07-week-1-syllabus.md](docs/07-week-1-syllabus.md) (now 3-week arc)
 
-## What you'll learn
+## AI engineer loop
+
+```
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
+```
+
+| Layer | Tools |
+|-------|--------|
+| Context | AGENTS.md, skills, `@`, LEARNINGS, plans in git |
+| Delegate | Ask / Agent / Plan / Debug, MCP (Week 3+) |
+| Verify | Xcode (sandbox), then tests/scripts/PR on real work |
+| Review | `/review-bugbot`, agent review |
+
+Deep dive: [Context engineering](docs/13-context-engineering.md)
+
+## Docs map
 
 | Topic | Doc |
 |-------|-----|
-| Cursor modes (Ask / Agent / Plan / Debug) | [docs/08-cursor-modes.md](docs/08-cursor-modes.md) |
-| **AGENTS.md** | [docs/09-agents-md.md](docs/09-agents-md.md) |
-| **Skills** (`/create-skill`, scoped skills) | [docs/10-skills.md](docs/10-skills.md) |
-| **Plan Mode** | [docs/03-plan-mode.md](docs/03-plan-mode.md) |
-| **Debug Mode** + **Bugbot** | [docs/11-debug-and-review.md](docs/11-debug-and-review.md) |
-| Xcode verify loop | [docs/05-verify-loop.md](docs/05-verify-loop.md) |
+| Mindset shift | [00-ai-engineer-mindset](docs/00-ai-engineer-mindset.md) |
+| Competencies + rubric | [12-ai-engineer-competencies](docs/12-ai-engineer-competencies.md) |
+| Context engineering | [13-context-engineering](docs/13-context-engineering.md) |
+| Modes | [08-cursor-modes](docs/08-cursor-modes.md) |
+| AGENTS.md | [09-agents-md](docs/09-agents-md.md) |
+| Skills | [10-skills](docs/10-skills.md) |
+| Plan / Debug / Bugbot | [03](docs/03-plan-mode.md), [11](docs/11-debug-and-review.md) |
 
 ## Repo layout
 
 ```
-docs/           # 00-watch-first → 11-debug-and-review
-exercises/      # 01–08 (capstone full loop)
-sample-app/     # StarterApp — SwiftUI practice target
-AGENTS.md       # Always-on agent instructions
-.cursor/skills/ # swiftui-exercises, ios-verify (examples)
-LEARNINGS.md    # Your session log
-docs/plans/     # Saved plans + expanded program plan
+docs/              # Mindset → competencies → mechanics → Week 3
+exercises/         # 01–09 (09 = AI engineer graduation, non-mobile)
+sample-app/        # StarterApp — training sandbox only
+AGENTS.md          # Example always-on context
+.cursor/skills/    # Example skills (promote patterns from LEARNINGS)
+LEARNINGS.md       # Regression log → future skills
 ```
-
-## Core loop
-
-```
-ORIENT → SPEC → [Ask] → [Plan] → Agent → VERIFY (Xcode) → [/review-bugbot] → LEARNINGS
-```
-
-## Sample app
-
-**StarterApp** — minimal in-memory habit list at `sample-app/StarterApp/`. Intentional gaps for exercises (empty state, detail screen). Not a shipped product.
 
 ## Program plan
 
-- [HIGH-LEVEL-PLAN.md](docs/HIGH-LEVEL-PLAN.md) — mentor / planner skeleton
-- [Expanded plan](docs/plans/2026-08-01-expanded-plan.md) — Week 1–2 milestones
+- [HIGH-LEVEL-PLAN.md](docs/HIGH-LEVEL-PLAN.md)
+- [Expanded plan](docs/plans/2026-08-01-expanded-plan.md)
 
 ## License
 

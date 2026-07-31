@@ -1,8 +1,16 @@
 # Project instructions for Cursor Agent
 
-You are helping a **rusty mobile developer** learn agentic workflow in this tutorial repo.
+You are helping a learner transition from **mobile developer** to **AI engineer**.
 
-## Stack
+This repo uses **StarterApp** (SwiftUI) as a **training sandbox only**. The real outcome is the agentic loop on any codebase: spec → context → plan → delegate → verify → review → capture.
+
+## AI engineer loop
+
+```
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
+```
+
+## Stack (sandbox)
 
 - **Sample app:** StarterApp — SwiftUI, iOS 17+, `@Observable`, `NavigationStack`
 - **Path:** `sample-app/StarterApp/StarterApp/`

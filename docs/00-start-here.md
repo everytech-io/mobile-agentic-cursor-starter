@@ -1,51 +1,48 @@
 # Start here
 
-Welcome. This repo teaches **agentic development with Cursor** for mobile developers who feel rusty — not "how to prompt ChatGPT."
+Read **[00-ai-engineer-mindset.md](00-ai-engineer-mindset.md) first** — this course trains **AI engineers**, not faster mobile devs. StarterApp is the sandbox.
 
-You will use **two apps**:
+## Two apps (Week 1–2 sandbox)
 
-| App | You use it for |
-|-----|----------------|
-| **Cursor** | Spec, Agent, Plan Mode, AGENTS.md, reviewing diffs |
-| **Xcode** | Build, run, debug — the source of truth |
+| App | Role |
+|-----|------|
+| **Cursor** | Spec, context, delegate to agent, review |
+| **Xcode** | Verify iOS behavior — one verifier among many |
 
-You do **not** need Xcode MCP or an M-series Mac for this course.
+Week 3+: verifiers become tests, curl, scripts, PR checks — same loop.
 
 ## Before you begin
 
-- [ ] [Watch/read the two Cursor Learn lessons](00-watch-first.md) (~15 min)
-- [ ] [Cursor](https://cursor.com/downloads) installed and signed in
-- [ ] Xcode installed
-- [ ] This repo cloned and opened in Cursor (`File → Open Folder`)
-- [ ] Sample app opens in Xcode and runs once:
+- [ ] [AI engineer mindset](00-ai-engineer-mindset.md)
+- [ ] [Competency map](12-ai-engineer-competencies.md) — skim levels 0→3
+- [ ] [Watch Cursor Learn](00-watch-first.md)
+- [ ] Cursor + Xcode installed; repo open in Cursor
+- [ ] `open sample-app/StarterApp/StarterApp.xcodeproj` → **⌘R** once
 
-```bash
-open sample-app/StarterApp/StarterApp.xcodeproj
+## AI engineer loop (every session)
+
+```
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
 ```
 
-Press **⌘R** on iPhone simulator. You should see **StarterApp** (the sample habit tracker) with two habits.
+| Step | This week (mobile sandbox) |
+|------|----------------------------|
+| SPEC | Exercise done-when |
+| CONTEXT | AGENTS.md, `@sample-app/`, skills |
+| PLAN | Shift+Tab for multi-file |
+| DELEGATE | Agent mode |
+| VERIFY | Xcode ⌘B / ⌘R |
+| REVIEW | `/review-bugbot` |
+| CAPTURE | LEARNINGS.md |
 
 ## How to use this repo
 
-1. Read docs **in order** (`docs/01` → `docs/06`).
-2. Do the matching **exercise** in `exercises/` the same day.
-3. After each session, append **one entry** to [LEARNINGS.md](../LEARNINGS.md).
-4. Official Cursor reference: [official-cursor-links.md](official-cursor-links.md).
+1. Mindset + competencies (above)
+2. Docs `01` → `06`, then `08`–`13` as syllabus dictates
+3. Exercises same day as reading
+4. **Week 3:** [Exercise 09](../exercises/09-ai-engineer-graduation.md) on non-mobile work
 
-## The workflow (every session)
-
-```
-ORIENT  → Ask Agent to explain, or read the exercise brief
-SPEC    → Goal + done-when + out-of-scope (exercises include templates)
-PLAN    → Plan Mode (Shift+Tab) for multi-file work
-BUILD   → Agent edits; you review diffs
-VERIFY  → Xcode ⌘B and ⌘R — never skip this
-CAPTURE → One LEARNINGS.md entry
-```
-
-4. Read [08-cursor-modes.md](08-cursor-modes.md) once you finish Week 1 — mode map for Plan / Debug / review.
-
-## Day 1 (today)
+## Day 1
 
 | Step | Link | Time |
 |------|------|------|
@@ -56,19 +53,8 @@ CAPTURE → One LEARNINGS.md entry
 
 ## Mental model
 
-**The Agent is a fast junior developer with terminal access.**
+You are not the typist. You are the **engineer who owns spec, context, verification, and memory**.
 
-- It does not "know" your app until it reads files.
-- It will confidently write wrong SwiftUI APIs unless you constrain it (AGENTS.md, skills, deployment target, review).
-- **Your job:** spec, review, verify in Xcode, capture learnings.
+The agent is fast and confident and wrong without you.
 
-That is agentic engineering — not vibe coding.
-
-## Stuck?
-
-- Agent hallucinating paths → `@sample-app/StarterApp/` to pin context
-- Build fails in Xcode → paste the **exact** error into Agent
-- Agent over-scoped → say "stop, only change `HabitListView.swift`"
-- [Cursor troubleshooting — agent issues](https://cursor.com/help/troubleshooting/agent-issues.md)
-
-Next: [01-install-and-open.md](01-install-and-open.md)
+Next: [13-context-engineering.md](13-context-engineering.md) after Week 1 · [01-install-and-open.md](01-install-and-open.md) now

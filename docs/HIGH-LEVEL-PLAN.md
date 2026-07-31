@@ -22,13 +22,15 @@ You are **not** implementing code yet. Your job:
 
 ## Mission
 
-Give a **rusty mobile developer** a repeatable loop:
+Transition **rusty mobile developers** into **AI engineers**:
 
 ```
-ORIENT → SPEC → PLAN → IMPLEMENT (Agent) → VERIFY (Xcode) → CAPTURE (LEARNINGS)
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
 ```
 
-No Xcode MCP required. Intel + Apple Silicon supported.
+StarterApp = Week 1–2 sandbox. Week 3 = same loop on learner's **non-mobile** work ([Exercise 09](../exercises/09-ai-engineer-graduation.md)).
+
+Mindset: [00-ai-engineer-mindset.md](00-ai-engineer-mindset.md) · Competencies: [12-ai-engineer-competencies.md](12-ai-engineer-competencies.md)
 
 ---
 
@@ -38,8 +40,8 @@ No Xcode MCP required. Intel + Apple Silicon supported.
 |-----------|--------|
 | Background | Built iOS/Android before; away from daily coding |
 | Gap | Used ChatGPT for snippets; never ran Agent with verify discipline |
-| Success | Can ship one verified change/day using Cursor + Xcode |
-| Not for | Greenfield CS students; advanced agent orchestration |
+| Success | Level 3: agentic loop on non-mobile work with verifier evidence |
+| Not for | "Learn SwiftUI with AI"; greenfield CS only |
 
 ---
 
@@ -85,17 +87,23 @@ No Xcode MCP required. Intel + Apple Silicon supported.
 
 ---
 
-### Phase 2 — Week 2 apply (learner → own app)
+### Phase 2 — Week 2: Context engineer (same sandbox)
 
-- [ ] Copy `AGENTS.md` + skill pattern into learner's real project
-- [ ] One real feature using same loop (spec → plan → agent → xcode)
-- [ ] Optional: SwiftLint in verify stack
-
-**Planner deliverable:** Week 2 exercise template; "graduation" checklist; Android-side note (Cursor + Android Studio) if in scope.
+See [07-week-1-syllabus.md](07-week-1-syllabus.md) Week 2.
 
 ---
 
-### Phase 3 — Mentor / EveryTech packaging
+### Phase 3 — Week 3: AI engineer graduation (mandatory)
+
+- [ ] Copy AGENTS.md + skill pattern to learner's **real project**
+- [ ] [Exercise 09](../exercises/09-ai-engineer-graduation.md) — **non-mobile** task with verifier evidence
+- [ ] Optional: one MCP integration (GitHub, Linear)
+
+**Planner deliverable:** Week 3 mentor checklist; examples of valid Ex 09 tasks per learner background (backend, PM, ops).
+
+---
+
+### Phase 4 — EveryTech packaging
 
 - [ ] Slide deck or 1-page facilitator guide
 - [ ] Link from `everytech-products` or internal LMS
@@ -106,7 +114,7 @@ No Xcode MCP required. Intel + Apple Silicon supported.
 
 ---
 
-### Phase 4 — Optional advanced (explicit opt-in)
+### Phase 5 — Advanced opt-in
 
 - [ ] Xcode MCP track (M-series + Xcode 26.3+ only) — separate doc, not Week 1
 - [ ] MCP: GitHub, Linear for PR workflow

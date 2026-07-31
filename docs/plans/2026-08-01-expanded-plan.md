@@ -1,17 +1,22 @@
-# Expanded plan — 2026-08-01
+# Expanded plan — 2026-08-01 (rev 2)
 
-> **Status:** Active curriculum (Week 1 + Week 2 shipped in repo)  
+> **Status:** Mobile → **AI Engineer** curriculum (Week 1–3)  
 > **Repo:** [everytech-io/mobile-agentic-cursor-starter](https://github.com/everytech-io/mobile-agentic-cursor-starter)
 
 ## Mission
 
-Teach rusty mobile developers the **full Cursor agentic surface** used in production:
+Transition rusty mobile developers into **AI engineers** — not "Cursor for iOS."
 
-- **AGENTS.md** — always-on project memory
-- **Skills** — scoped workflows (`/create-skill`, `/ios-verify`, `/swiftui-exercises`)
-- **Modes** — Ask, Agent, **Plan**, **Debug**
-- **Review** — `/review-bugbot`, agent review before ship
-- **Verify** — Xcode ⌘B/⌘R (non-negotiable for iOS)
+| Week | Role | Where |
+|------|------|-------|
+| 1–2 | Learn loop + context on **StarterApp sandbox** | SwiftUI + Xcode verify |
+| 3 | **Graduate** — same loop on real non-mobile work | Their repo / API / script / ticket |
+
+Core loop:
+
+```
+SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY → REVIEW → CAPTURE
+```
 
 ---
 
@@ -19,95 +24,98 @@ Teach rusty mobile developers the **full Cursor agentic surface** used in produc
 
 | Artifact | Path | Status |
 |----------|------|--------|
-| Watch-first (Cursor Learn) | `docs/00-watch-first.md` | ✅ |
-| Week 1 docs | `docs/00`–`06`, `05-verify` | ✅ |
-| Week 2 docs | `docs/08`–`11` (modes, AGENTS, skills, debug/review) | ✅ |
-| Exercises 01–08 | `exercises/` | ✅ |
-| Sample app StarterApp | `sample-app/StarterApp/` | ✅ |
-| AGENTS.md | root | ✅ |
-| Skills (example) | `.cursor/skills/swiftui-exercises/`, `ios-verify/` | ✅ |
-| Full syllabus | `docs/07-week-1-syllabus.md` | ✅ |
-| Official links | `docs/official-cursor-links.md` | ✅ |
+| AI engineer mindset | `docs/00-ai-engineer-mindset.md` | ✅ |
+| Competency matrix | `docs/12-ai-engineer-competencies.md` | ✅ |
+| Context engineering | `docs/13-context-engineering.md` | ✅ |
+| Week 1–2 mechanics | `docs/00`–`11` | ✅ |
+| Exercises 01–09 | `exercises/` (09 = non-mobile graduation) | ✅ |
+| StarterApp sandbox | `sample-app/StarterApp/` | ✅ |
+| Example context | `AGENTS.md`, `.cursor/skills/` | ✅ |
 
 ---
 
-## Week 1 milestones (5–7 h learner time)
+## Week 1 — Level 1: Agent operator
 
-| # | Milestone | Acceptance |
-|---|-----------|------------|
-| W1.1 | Clone, watch, run StarterApp | ⌘R succeeds |
-| W1.2 | Agent orient + empty state | Ex 01–02, LEARNINGS |
-| W1.3 | Plan Mode detail screen | Plan saved optional; Ex 03 ships |
-| W1.4 | AGENTS.md extended | Ex 04, 06 — verify ritual section |
-| W1.5 | Dual-app cold verify | Ex 03 re-tested without notes |
+Sandbox only. Competencies: **C1 spec, C4 verify, C9 domain catch**.
 
----
-
-## Week 2 milestones (4–6 h learner time)
-
-| # | Milestone | Acceptance |
-|---|-----------|------------|
-| W2.1 | Skills literacy | Ex 07 — `ios-verify` skill exists |
-| W2.2 | Debug Mode | Ex 05 — repro → fix → cleanup |
-| W2.3 | Bugbot review | `/review-bugbot` on sample-app diff |
-| W2.4 | Capstone full loop | Ex 08 — Ask → Plan → Agent → Review |
-| W2.5 | Own app transfer | AGENTS.md + skills copied; one real feature |
+| Milestone | Acceptance |
+|-----------|------------|
+| Mindset + watch-first | Can explain mobile vs AI engineer table |
+| Ex 01–02 | SPEC + Xcode verify + LEARNINGS |
+| Ex 03 | Plan Mode multi-file |
+| Ex 04, 06 | AGENTS.md extended |
 
 ---
 
-## Mode routing (teaching script)
+## Week 2 — Level 2: Context engineer
 
-```
-Understand only        → Ask
-One screen, spec'd     → Agent
-Multi-file / unclear   → Plan → Agent
-Repro bug, unclear why → Debug
-Before ship            → /review-bugbot
-Always (iOS)           → Xcode verify
-```
+Competencies: **C2 context, C3 modes, C5 review, C6 memory, C7 plan, C8 debug**.
+
+| Milestone | Acceptance |
+|-----------|------------|
+| Ex 07 | Custom or ios-verify skill |
+| Ex 05 | Debug workflow |
+| Ex 08 | Ask → Plan → Agent → review |
+| Bugbot | Run once on sample-app diff |
 
 ---
 
-## Risks and mitigations
+## Week 3 — Level 3: AI engineer (mandatory for graduation)
+
+Competency: **C10 transfer**.
+
+| Milestone | Acceptance |
+|-----------|------------|
+| AGENTS.md copied to learner project | Not tutorial repo only |
+| Ex 09 complete | **Non-mobile** task with verifier evidence |
+| Verifier | Tests / curl / script / PR — not only Xcode |
+| Can teach context stack | 5-min explanation without notes |
+
+Options for Ex 09: script, API, docs, ticket, MCP read-only query.
+
+---
+
+## What "AI engineer" means here (teaching script)
+
+1. **Spec is the product** — done-when is your eval
+2. **Context is the job** — AGENTS.md + skills + plans in git
+3. **Delegate, don't type** — agent + subagents + MCP
+4. **Verify with evidence** — mobile devs already know this; generalize it
+5. **Domain beats model** — you own truth tables, APIs, deployment targets
+6. **Close the loop** — review → merge → LEARNINGS → skill
+
+StarterApp is **gym**. Week 3 is **the job**.
+
+---
+
+## Risks
 
 | Risk | Mitigation |
 |------|------------|
-| Agent hallucinates SwiftUI APIs | AGENTS.md + swiftui-exercises skill; iOS 17 in every prompt |
-| Learner skips Xcode | ios-verify skill; mentor checks LEARNINGS |
-| Debug Mode weak on SwiftUI | Fallback: Ask + console paste (doc 11) |
-| Intel Mac / no Xcode MCP | Document dual-app; MCP = optional Phase 4 |
-| Rules confusion | Teach skills-first; rules = compliance only |
-| Over-scoped capstone | Ex 08 options A/B are one-screen |
+| Stops at SwiftUI | Week 3 + Ex 09 required for "graduate" |
+| Thinks prompting = AI engineering | Mindset doc + context engineering doc |
+| No verifier on real work | Ex 09 rubric requires command output / PR |
+| Copilot habits | SPEC + REVIEW gates every exercise |
 
 ---
 
-## Phase 3 — EveryTech packaging (next)
+## Phase 4 — EveryTech packaging
 
-- [ ] Facilitator 1-pager (live workshop 3h vs async 2-week)
-- [ ] Link from `everytech-products` README
-- [ ] Pilot 3 learners; track time-to-first-⌘R
-- [ ] Optional: recorded EveryTech walkthrough (modes demo)
-- [ ] Optional: Android Studio parallel doc
-
----
-
-## Phase 4 — Advanced opt-in
-
-- [ ] Xcode MCP (M-series, Xcode 26.3+)
-- [ ] MCP GitHub / Linear
-- [ ] Cloud Agents
-- [ ] Every* adapter mobile lesson
+- [ ] Facilitator guide: Week 3 is not optional
+- [ ] Link from everytech-products
+- [ ] Pilot: measure **Ex 09 completion**, not Ex 02
+- [ ] Optional: MCP week, Cloud Agents, Every* adapter module
 
 ---
 
-## Metrics (targets for pilot)
+## Metrics (pilot)
 
 | Metric | Target |
 |--------|--------|
-| First verified Agent edit | < 90 min |
-| Week 1 completion (Ex 1–4) | ≥ 70% |
-| Week 2 completion (Ex 5–8) | ≥ 50% |
-| Uses Plan + Debug + Bugbot once each | 100% of graduates |
+| Level 1 (Week 1) | ≥ 70% complete Ex 1–4 |
+| Level 2 (Week 2) | ≥ 50% complete Ex 5–8 |
+| **Level 3 (Week 3)** | ≥ 40% complete **Ex 09** |
+| Ex 09 with non-Xcode verifier | 100% of Level 3 |
 
 ---
 
@@ -115,4 +123,5 @@ Always (iOS)           → Xcode verify
 
 | Date | Change |
 |------|--------|
-| 2026-08-01 | Initial expanded plan — full skills, AGENTS.md, Plan, Debug, Bugbot curriculum |
+| 2026-08-01 | Rev 2 — reframe mobile sandbox → AI engineer; Week 3 + Ex 09 |
+| 2026-08-01 | Rev 1 — skills, Plan, Debug, Bugbot |

@@ -1,63 +1,65 @@
-# Full syllabus — Cursor agentic workflow for mobile devs
+# Full syllabus — Mobile → AI Engineer
 
-Two-week path: **Agent basics → AGENTS.md → Skills → Plan → Debug → Review → capstone**.
+Three-week arc: **sandbox (mobile) → agent ops → graduation on real work**.
 
-Official index: [official-cursor-links.md](official-cursor-links.md)  
-Program plan: [HIGH-LEVEL-PLAN.md](HIGH-LEVEL-PLAN.md) · Expanded: [plans/2026-08-01-expanded-plan.md](plans/2026-08-01-expanded-plan.md)
-
----
-
-## Week 1 — Loop + verify
-
-| Day | Read | Exercise | Outcome |
-|-----|------|----------|---------|
-| 0 | [00-watch-first](00-watch-first.md) | — | Cursor Learn: Agents + Working with agents |
-| 1 | [00-start-here](00-start-here.md), [01-install](01-install-and-open.md), [02-day-1](02-day-1-explore-and-edit.md) | [01](../exercises/01-explore.md), [02](../exercises/02-small-change.md) | Orient + one verified edit |
-| 2 | [05-verify-loop](05-verify-loop.md) | Finish 02 | LEARNINGS #1 |
-| 3 | [03-plan-mode](03-plan-mode.md), [08-cursor-modes](08-cursor-modes.md) | [03](../exercises/03-plan-feature.md) | Plan → detail screen |
-| 4 | [04-rules-and-context](04-rules-and-context.md), [09-agents-md](09-agents-md.md) | [04](../exercises/04-capture-learning.md), [06](../exercises/06-agents-md.md) | AGENTS.md + LEARNINGS |
-| 5 | [06-cursor-plus-xcode](06-cursor-plus-xcode.md) | Re-verify Ex 03 in Xcode only | Dual-app habit |
+- Mindset: [00-ai-engineer-mindset.md](00-ai-engineer-mindset.md)
+- Competencies: [12-ai-engineer-competencies.md](12-ai-engineer-competencies.md)
+- Context: [13-context-engineering.md](13-context-engineering.md)
+- Plan: [plans/2026-08-01-expanded-plan.md](plans/2026-08-01-expanded-plan.md)
 
 ---
 
-## Week 2 — Full Cursor surface area
+## Week 1 — Agent operator (sandbox: StarterApp)
 
-| Day | Read | Exercise | Outcome |
-|-----|------|----------|---------|
-| 6 | [10-skills](10-skills.md) | [07](../exercises/07-create-skill.md) | `/create-skill` + `ios-verify` |
-| 7 | [11-debug-and-review](11-debug-and-review.md) | [05](../exercises/05-debug-mode.md) | Debug Mode workflow |
-| 8 | [08-cursor-modes](08-cursor-modes.md) | `/review-bugbot` on sample-app | Review gate |
-| 9 | [08-cursor-modes](08-cursor-modes.md) | [08](../exercises/08-full-loop.md) | Ask → Plan → Agent → Review |
-| 10 | — | Own app | Copy AGENTS.md + `.cursor/skills/` |
+| Day | Read | Exercise | AI engineer skill |
+|-----|------|----------|-------------------|
+| 0 | [00-ai-engineer-mindset](00-ai-engineer-mindset.md), [00-watch-first](00-watch-first.md) | — | Identity shift |
+| 1 | [00-start-here](00-start-here.md), [01-install](01-install-and-open.md), [02-day-1](02-day-1-explore-and-edit.md) | [01](../exercises/01-explore.md), [02](../exercises/02-small-change.md) | SPEC + VERIFY |
+| 2 | [05-verify-loop](05-verify-loop.md), [13-context-engineering](13-context-engineering.md) | Finish 02 | Evidence > vibes |
+| 3 | [08-cursor-modes](08-cursor-modes.md), [03-plan-mode](03-plan-mode.md) | [03](../exercises/03-plan-feature.md) | PLAN before delegate |
+| 4 | [09-agents-md](09-agents-md.md), [04-rules-and-context](04-rules-and-context.md) | [04](../exercises/04-capture-learning.md), [06](../exercises/06-agents-md.md) | CONTEXT (AGENTS.md) |
+| 5 | [06-cursor-plus-xcode](06-cursor-plus-xcode.md) | Re-verify Ex 03 | Dual-app verify habit |
 
----
-
-## Topic map (what you teach)
-
-| Topic | Doc | Invoke / mode |
-|-------|-----|-------------|
-| Ask vs Agent | [08-cursor-modes](08-cursor-modes.md) | Ask mode |
-| Agent + @ context | [04-rules-and-context](04-rules-and-context.md) | `@file` |
-| **AGENTS.md** | [09-agents-md](09-agents-md.md) | root file |
-| **Skills** | [10-skills](10-skills.md) | `/swiftui-exercises`, `/ios-verify`, `/create-skill` |
-| **Plan Mode** | [03-plan-mode](03-plan-mode.md) | Shift+Tab → Plan |
-| **Debug Mode** | [11-debug-and-review](11-debug-and-review.md) | Shift+Tab → Debug |
-| **Bugbot / review** | [11-debug-and-review](11-debug-and-review.md) | `/review-bugbot` |
-| Xcode verify | [05-verify-loop](05-verify-loop.md), [06-cursor-plus-xcode](06-cursor-plus-xcode.md) | ⌘B / ⌘R |
+**Level 1 graduate:** runs agent with spec, verifies, captures LEARNINGS.
 
 ---
 
-## Graduation checklist
+## Week 2 — Context engineer (same sandbox, deeper agent ops)
 
-- [ ] Exercises 01–08 complete (or 01–04 + 05–08 if skipping duplicates)
-- [ ] AGENTS.md customized with verify ritual
-- [ ] At least 2 skills in `.cursor/skills/` (swiftui-exercises + ios-verify or your own)
-- [ ] One plan saved in `docs/plans/`
-- [ ] Used Plan, Debug, and `/review-bugbot` at least once each
-- [ ] Applied loop on **your** iOS project
+| Day | Read | Exercise | AI engineer skill |
+|-----|------|----------|-------------------|
+| 6 | [10-skills](10-skills.md) | [07](../exercises/07-create-skill.md) | Skills as product |
+| 7 | [11-debug-and-review](11-debug-and-review.md) | [05](../exercises/05-debug-mode.md) | Debug with evidence |
+| 8 | [08-cursor-modes](08-cursor-modes.md) | `/review-bugbot` | REVIEW gate |
+| 9 | [12-ai-engineer-competencies](12-ai-engineer-competencies.md) | [08](../exercises/08-full-loop.md) | Full loop |
+| 10 | — | Reflect: what transfers off-mobile? | — |
+
+**Level 2 graduate:** AGENTS.md + skills + Plan + Debug + review.
+
+---
+
+## Week 3 — AI engineer (your real work)
+
+| Day | Focus | Exercise | AI engineer skill |
+|-----|-------|----------|-------------------|
+| 11–12 | Copy AGENTS.md + skills to **your repo** | Prep for 09 | Context portability |
+| 13–15 | Non-mobile task | [09](../exercises/09-ai-engineer-graduation.md) | **TRANSFER** |
+| Optional | MCP, CLI agent, subagents | [official-cursor-links](official-cursor-links.md) | Tool orchestration |
+
+**Level 3 graduate:** same loop on API / script / ticket / doc — not StarterApp.
+
+---
+
+## Graduation checklist (Level 3)
+
+- [ ] [Exercise 09](../exercises/09-ai-engineer-graduation.md) complete with **verifier evidence**
+- [ ] AGENTS.md in your project (not just this tutorial repo)
+- [ ] ≥1 custom skill in your project
+- [ ] Can teach **context stack** ([13](13-context-engineering.md)) to another dev in 5 min
+- [ ] Articulate: **domain beats model** with an example from your work
 
 ---
 
 ## Mentor note
 
-Teach **modes as routing**, not feature tourism. Every mode ends in **Xcode verify** for mobile.
+Week 1–2 mobile is **deliberately familiar** so verify discipline lands. If they finish Week 2 still talking only about SwiftUI, **Week 3 is mandatory** — otherwise you trained a copilot user, not an AI engineer.
