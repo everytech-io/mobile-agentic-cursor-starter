@@ -1,8 +1,8 @@
 # Start here
 
-Read **[00-ai-engineer-mindset.md](00-ai-engineer-mindset.md)** then **[15-shipgate-levels.md](15-shipgate-levels.md)**.
+Read **[00-ai-engineer-mindset.md](00-ai-engineer-mindset.md)** then **[15-release-ready-levels.md](15-release-ready-levels.md)**.
 
-## One workspace: ShipGate
+## One workspace: Release Ready
 
 | Tool | Role |
 |------|------|
@@ -14,13 +14,13 @@ No Xcode required. Optional iOS sandbox: [sample-app/](../sample-app/).
 ## Before you begin
 
 - [ ] [AI engineer mindset](00-ai-engineer-mindset.md)
-- [ ] [ShipGate levels](15-shipgate-levels.md)
+- [ ] [Release Ready levels](15-release-ready-levels.md)
 - [ ] [Competency map](12-ai-engineer-competencies.md)
 - [ ] [Watch Cursor Learn](00-watch-first.md)
-- [ ] ShipGate setup:
+- [ ] Release Ready setup:
 
 ```bash
-cd shipgate && uv venv && source .venv/bin/activate && uv pip install -e ".[dev]"
+cd release-ready && uv venv && source .venv/bin/activate && uv pip install -e ".[dev]"
 pytest -q   # 2 failures until Ex 02–03 — expected
 ```
 

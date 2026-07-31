@@ -1,4 +1,4 @@
-# Day 1: Explore and edit (ShipGate Level 1)
+# Day 1: Explore and edit (Release Ready Level 1)
 
 **Loop:** orient → spec → one change → parallel verify.
 
@@ -15,7 +15,7 @@ Implement empty_message() for zero-item checklists.
 ## Done when
 - [ ] pytest tests/test_core.py::test_empty_message_shows_helpful_copy passes
 - [ ] Human diff reviewed
-- [ ] /review-bugbot on shipgate/ (parallel)
+- [ ] /review-bugbot on release-ready/ (parallel)
 
 ## Out of scope
 - API, CLI, database
@@ -29,7 +29,7 @@ Implement empty_message() for zero-item checklists.
 
 1. `pytest tests/test_core.py::test_empty_message_shows_helpful_copy -q`
 2. Read diff
-3. `/review-bugbot` on `shipgate/` — start while pytest runs
+3. `/review-bugbot` on `release-ready/` — start while pytest runs
 
 Paste full pytest output on failure.
 
@@ -37,4 +37,4 @@ Paste full pytest output on failure.
 
 Append [LEARNINGS.md](../LEARNINGS.md).
 
-Next: [15-shipgate-levels.md](15-shipgate-levels.md)
+Next: [15-release-ready-levels.md](15-release-ready-levels.md)

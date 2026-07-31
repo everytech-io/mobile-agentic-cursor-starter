@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from shipgate.core.models import CheckItem, Checklist, ItemStatus
+from release_ready.core.models import CheckItem, Checklist, ItemStatus
 
 
 class ChecklistStore:

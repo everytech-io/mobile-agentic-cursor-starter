@@ -1,4 +1,4 @@
-# Exercise 01 — Explore ShipGate (Level 1)
+# Exercise 01 — Explore Release Ready (Level 1)
 
 **Goal:** Orient with Agent before writing code.  
 **Time:** ~20 minutes  
@@ -8,7 +8,7 @@
 ## Setup (once)
 
 ```bash
-cd shipgate
+cd release-ready
 uv venv && source .venv/bin/activate
 uv pip install -e ".[dev]"
 pytest -q    # note: 2 failures until Ex 02–03
@@ -21,11 +21,11 @@ pytest -q    # note: 2 failures until Ex 02–03
 3. Paste:
 
 ```
-@shipgate/
+@release-ready/
 
-Explain ShipGate like I'm a rusty dev returning to code after mobile-only work.
+Explain Release Ready like I'm a rusty dev returning to code after mobile-only work.
 Include:
-- What problem ShipGate solves (pre-ship checklist)
+- What problem Release Ready solves (pre-ship checklist)
 - Level 1 vs Level 2 vs Level 3 layers
 - Where checklist domain logic lives
 - File I'd open first to change empty-checklist behavior
@@ -39,7 +39,7 @@ Max 12 bullets.
 
 ## Success criteria
 
-- [ ] You can name the domain module (`shipgate/core/store.py`)
+- [ ] You can name the domain module (`release-ready/core/store.py`)
 - [ ] You understand **2 failing tests are intentional**
 - [ ] You know the Level 1 verifier: `pytest tests/test_core.py`
 

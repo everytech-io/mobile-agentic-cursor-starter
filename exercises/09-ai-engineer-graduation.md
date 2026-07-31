@@ -1,14 +1,14 @@
 # Exercise 09 — AI engineer graduation (Level 4)
 
-**Goal:** Prove the loop on **real work** — extend ShipGate or your own repo.  
+**Goal:** Prove the loop on **real work** — extend Release Ready or your own repo.  
 **Time:** ~2–3 hours  
-**Read first:** [docs/12-ai-engineer-competencies.md](../docs/12-ai-engineer-competencies.md), [docs/15-shipgate-levels.md](../docs/15-shipgate-levels.md)
+**Read first:** [docs/12-ai-engineer-competencies.md](../docs/12-ai-engineer-competencies.md), [docs/15-release-ready-levels.md](../docs/15-release-ready-levels.md)
 
 ## Pick ONE path
 
 | Path | Example done-when |
 |------|-------------------|
-| **A. ShipGate L4** | SQLite persistence + pytest; or GitHub MCP reads PR checks into a checklist |
+| **A. Release Ready L4** | SQLite persistence + pytest; or GitHub MCP reads PR checks into a checklist |
 | **B. Script / CLI** | Automate one task; exit 0 on success |
 | **C. API / backend** | One handler change + test or curl |
 | **D. Ticket** | Linear/Jira → branch → fix → PR |
@@ -29,7 +29,7 @@ Copy to target project: `AGENTS.md`, `.cursor/skills/`, `LEARNINGS.md`.
 
 ## Mentor rubric (Level 3)
 
-- [ ] Task beyond L2 capstone scope (persistence, deploy, integration, or non-ShipGate repo)
+- [ ] Task beyond L2 capstone scope (persistence, deploy, integration, or non-Release Ready repo)
 - [ ] Spec had testable done-when
 - [ ] Verifier evidence pasted (pytest/curl/PR/CI)
 - [ ] AGENTS.md in target project

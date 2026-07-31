@@ -12,12 +12,12 @@ cd mobile-agentic-cursor-starter
 cursor .
 ```
 
-## 3. ShipGate setup (primary app)
+## 3. Release Ready setup (primary app)
 
 Requires **Python 3.9+**. Recommended: [uv](https://docs.astral.sh/uv/).
 
 ```bash
-cd shipgate
+cd release-ready
 uv venv && source .venv/bin/activate
 uv pip install -e ".[dev]"
 pytest -q
@@ -44,7 +44,7 @@ pytest -q
 ## 5. Named verifier (memorize)
 
 ```bash
-cd shipgate && ./scripts/verify.sh
+cd release-ready && ./scripts/verify.sh
 ```
 
 Add this to AGENTS.md in Exercise 06.
@@ -53,6 +53,6 @@ Add this to AGENTS.md in Exercise 06.
 
 - [ ] Cursor opens repo root
 - [ ] `pytest -q` runs (2 known failures OK)
-- [ ] You read [15-shipgate-levels.md](15-shipgate-levels.md)
+- [ ] You read [15-release-ready-levels.md](15-release-ready-levels.md)
 
 Next: [Exercise 01](../exercises/01-explore.md)

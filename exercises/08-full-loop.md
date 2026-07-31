@@ -3,7 +3,7 @@
 **Goal:** End-to-end feature on API layer with all modes.  
 **Time:** ~90 min  
 **Level:** L2 API  
-**Read first:** [docs/08-cursor-modes.md](../docs/08-cursor-modes.md), [docs/15-shipgate-levels.md](../docs/15-shipgate-levels.md)
+**Read first:** [docs/08-cursor-modes.md](../docs/08-cursor-modes.md), [docs/15-release-ready-levels.md](../docs/15-release-ready-levels.md)
 
 ## Feature (pick one)
 
@@ -26,8 +26,8 @@
 - [ ] New test(s) in `tests/test_api.py`
 - [ ] curl one-liner in LEARNINGS or plan doc proves behavior
 - [ ] `/review-bugbot` run in parallel
-- [ ] Can explain Level 1 vs 2 vs 3 from [15-shipgate-levels.md](../docs/15-shipgate-levels.md)
+- [ ] Can explain Level 1 vs 2 vs 3 from [15-release-ready-levels.md](../docs/15-release-ready-levels.md)
 
-**Level 3 CLI stretch:** wire `shipgate check` to hit API instead of in-memory store (optional).
+**Level 3 CLI stretch:** wire `release-ready check` to hit API instead of in-memory store (optional).
 
 Graduation: [09-ai-engineer-graduation.md](09-ai-engineer-graduation.md)

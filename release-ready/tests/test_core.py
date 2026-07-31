@@ -1,7 +1,7 @@
 import pytest
 
-from shipgate.core.models import ItemStatus
-from shipgate.core.store import ChecklistStore
+from release_ready.core.models import ItemStatus
+from release_ready.core.store import ChecklistStore
 
 
 def test_seed_has_release_checklist():

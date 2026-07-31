@@ -1,50 +1,40 @@
 # Project instructions for Cursor Agent
 
-You are helping a learner transition from **mobile developer** to **AI engineer**.
+Learner is building **Release Ready** — see [PRODUCT.md](PRODUCT.md).
 
-**Primary app:** [ShipGate](shipgate/) — pre-ship checklist, leveled core → API → CLI.  
-Optional legacy iOS sandbox: `sample-app/` (do not prioritize unless learner asks).
+**One line:** checklist engine that answers *can we ship?* with tests, API, and CLI.
 
-## AI engineer loop
+## Loop
 
 ```
 SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 ```
 
-VERIFY and REVIEW run **in parallel** after a diff exists.
+## Product codebase
 
-## Stack (ShipGate)
+- **Root:** `release-ready/`
+- **L1 domain:** `release_ready/core/`
+- **L2 API:** `release_ready/api/`
+- **L3 CLI:** `release_ready/cli/` → command `release-ready`
+- **Verifier:** `cd release-ready && ./scripts/verify.sh`
 
-- **Python 3.9+**, FastAPI, pytest, httpx TestClient
-- **Layout:**
-  - `shipgate/shipgate/core/` — domain (Level 1)
-  - `shipgate/shipgate/api/` — REST (Level 2)
-  - `shipgate/shipgate/cli/` — terminal (Level 3)
-  - `shipgate/tests/` — eval suite
-- **Primary verifier:** `cd shipgate && ./scripts/verify.sh` or `pytest -q`
+## Exercise gaps (do not fix unless exercise says)
 
-## Intentional gaps (do not fix unless exercise requires)
-
-| Gap | Exercise |
-|-----|----------|
-| `empty_message()` returns blank | 02 |
+| Gap | Ex |
+|-----|-----|
+| `empty_message()` blank | 02 |
 | `get_item_detail()` + GET item route | 03 |
-| Toggle from FAILED jumps to PASSED | 05 |
+| FAILED toggle bug | 05 |
 
-## Workflow rules
+## Rules
 
-1. Read `exercises/` and [docs/15-shipgate-levels.md](docs/15-shipgate-levels.md) before large changes.
-2. Minimal diffs — one exercise scope at a time.
-3. No new dependencies unless exercise asks.
-4. After edits: **parallel verify** — pytest/curl, human diff, suggest `/review-bugbot` on `shipgate/`; LEARNINGS.md.
+1. Read [PRODUCT.md](PRODUCT.md) and current `exercises/` before large edits.
+2. Minimal diffs — one exercise at a time.
+3. After edits: parallel verify (pytest, human diff, `/review-bugbot` on `release-ready/`).
 
 ## Skills
 
-- `.cursor/skills/shipgate-core/` — Python + gap rules
-- `.cursor/skills/verify-after-edit/` — parallel verify ritual
+- `.cursor/skills/release-ready-core/`
+- `.cursor/skills/verify-after-edit/`
 
-## Repo layout
-
-- `docs/` — curriculum (start: 15-shipgate-levels, 00-ai-engineer-mindset)
-- `exercises/` — hands-on
-- `LEARNINGS.md` — append-only regression log
+Optional legacy iOS: `sample-app/` — not the product.

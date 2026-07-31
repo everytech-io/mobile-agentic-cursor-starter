@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 
-from shipgate.api.app import app
+from release_ready.api.app import app
 
 client = TestClient(app)
 

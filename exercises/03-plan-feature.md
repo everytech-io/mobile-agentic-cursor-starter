@@ -8,7 +8,7 @@
 ## Spec
 
 ```
-Plan Mode: Add checklist item detail for ShipGate.
+Plan Mode: Add checklist item detail for Release Ready.
 
 ## Done when
 - [ ] ChecklistStore.get_item_detail() returns: label, status, blocking_reason (empty string if passed)
@@ -33,7 +33,7 @@ Plan Mode: Add checklist item detail for ShipGate.
 ## Plan prompt hint
 
 ```
-@shipgate/shipgate/core/store.py @shipgate/shipgate/api/app.py @shipgate/tests/
+@release-ready/release_ready/core/store.py @release-ready/release_ready/api/app.py @release-ready/tests/
 Keep API handlers thin. blocking_reason explains why item blocks ship if not passed.
 ```
 

@@ -1,7 +1,7 @@
 [project]
-name = "shipgate"
+name = "release-ready"
 version = "0.1.0"
-description = "Pre-ship checklist trainer for AI engineer curriculum"
+description = "Release Ready — can we ship? checklist engine (EveryTech AI engineer course)"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
@@ -16,7 +16,7 @@ dev = [
 ]
 
 [project.scripts]
-shipgate = "shipgate.cli.main:main"
+release-ready = "release_ready.cli.main:main"
 
 [build-system]
 requires = ["setuptools>=75.0"]
@@ -24,7 +24,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["shipgate*"]
+include = ["release_ready*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

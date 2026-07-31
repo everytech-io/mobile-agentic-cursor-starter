@@ -24,7 +24,7 @@ Repro:
 
 Expected: PENDING after toggle from FAILED
 
-@shipgate/shipgate/core/store.py
+@release-ready/release_ready/core/store.py
 
 Fix minimally. Add or update a pytest that locks correct behavior.
 Parallel verify: pytest -q + Bugbot.

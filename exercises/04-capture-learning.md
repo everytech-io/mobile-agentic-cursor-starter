@@ -16,7 +16,7 @@
 
 ## Part B — Skills not rules
 
-Use AGENTS.md + `shipgate-core` skill — skip `.cursor/rules/` unless compliance requires.
+Use AGENTS.md + `release-ready-core` skill — skip `.cursor/rules/` unless compliance requires.
 
 ## Done when
 

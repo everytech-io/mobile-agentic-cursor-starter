@@ -3,10 +3,10 @@ from __future__ import annotations
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from shipgate.core.models import Checklist, ItemStatus
-from shipgate.core.store import ChecklistStore
+from release_ready.core.models import Checklist, ItemStatus
+from release_ready.core.store import ChecklistStore
 
-app = FastAPI(title="ShipGate", version="0.1.0")
+app = FastAPI(title="Release Ready", version="0.1.0")
 store = ChecklistStore()
 
 

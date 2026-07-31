@@ -1,8 +1,8 @@
 # Legacy — StarterApp (optional)
 
-**Not the primary course track.** Use only if you want SwiftUI practice alongside ShipGate.
+**Not the primary course track.** Use only if you want SwiftUI practice alongside Release Ready.
 
-The AI engineer path is [ShipGate](../shipgate/) — pytest, API, CLI. See [docs/15-shipgate-levels.md](../docs/15-shipgate-levels.md).
+The AI engineer path is [Release Ready](../release-ready/) — pytest, API, CLI. See [docs/15-release-ready-levels.md](../docs/15-release-ready-levels.md).
 
 To run:
 

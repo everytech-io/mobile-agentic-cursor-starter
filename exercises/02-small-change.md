@@ -13,8 +13,8 @@ When a checklist has zero items, empty_message() returns helpful copy for an eng
 
 ## Done when
 - [ ] pytest tests/test_core.py::test_empty_message_shows_helpful_copy passes
-- [ ] Human: diff reviewed — only shipgate/shipgate/core/ changed (unless tests need one-line tweak)
-- [ ] Agent review: /review-bugbot on shipgate/ (parallel with pytest)
+- [ ] Human: diff reviewed — only release-ready/release_ready/core/ changed (unless tests need one-line tweak)
+- [ ] Agent review: /review-bugbot on release-ready/ (parallel with pytest)
 
 ## Out of scope
 - API routes
@@ -26,15 +26,15 @@ When a checklist has zero items, empty_message() returns helpful copy for an eng
 
 ```
 Implement the spec above.
-Match existing style in @shipgate/shipgate/core/store.py
+Match existing style in @release-ready/release_ready/core/store.py
 Run pytest tests/test_core.py::test_empty_message_shows_helpful_copy when done.
 ```
 
 ## Verify (parallel lanes)
 
-1. **Automated:** `cd shipgate && pytest tests/test_core.py::test_empty_message_shows_helpful_copy -q`
+1. **Automated:** `cd release-ready && pytest tests/test_core.py::test_empty_message_shows_helpful_copy -q`
 2. **Human:** read diff
-3. **Agent review:** `/review-bugbot` on `shipgate/`
+3. **Agent review:** `/review-bugbot` on `release-ready/`
 
 ## Capture
 

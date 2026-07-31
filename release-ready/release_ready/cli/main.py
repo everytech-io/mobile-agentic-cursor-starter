@@ -4,11 +4,11 @@ import argparse
 import json
 import sys
 
-from shipgate.core.store import ChecklistStore
+from release_ready.core.store import ChecklistStore
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="ShipGate CLI — pre-ship checks")
+    parser = argparse.ArgumentParser(description="Release Ready — can we ship?")
     sub = parser.add_subparsers(dest="command", required=True)
 
     list_cmd = sub.add_parser("list", help="List checklists")

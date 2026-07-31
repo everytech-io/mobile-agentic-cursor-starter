@@ -1,23 +1,13 @@
 ---
 name: verify-after-edit
-description: After agent edits, run parallel verification — automated verifier, human diff review, and agent review. Use when changes are complete or learner asks what to do before marking done.
-paths: shipgate/**/*
+description: After Release Ready edits, run parallel verify — pytest, human diff, agent review.
+paths: release-ready/**/*
 ---
 
-# Verify after edit (parallel lanes)
+# Verify after edit
 
-Run after any agent edit batch.
+1. **Automated:** `cd release-ready && ./scripts/verify.sh`
+2. **Human:** diff + done-when path
+3. **Agent:** `/review-bugbot` on `release-ready/` (parallel with pytest)
 
-## Three lanes (parallel — start all at once)
-
-1. **Automated** — `cd shipgate && ./scripts/verify.sh` or pytest subset from done-when
-2. **Human** — learner reads diff; walks manual path from spec
-3. **Agent review** — `/review-bugbot` on `shipgate/` — do not wait for pytest to finish
-
-## On failure
-
-Ask for **full pytest/curl output** before more edits.
-
-## Close
-
-Append [LEARNINGS.md](../../LEARNINGS.md). Mark done only when done-when checklist is green.
+Paste full pytest output on failure. Append [LEARNINGS.md](../../LEARNINGS.md) when done.
