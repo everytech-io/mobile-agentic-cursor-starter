@@ -1,47 +1,34 @@
 # Start here
 
-Read **[00-ai-engineer-mindset.md](00-ai-engineer-mindset.md) first** — this course trains **AI engineers**, not faster mobile devs. StarterApp is the sandbox.
+Read **[00-ai-engineer-mindset.md](00-ai-engineer-mindset.md)** then **[15-shipgate-levels.md](15-shipgate-levels.md)**.
 
-## One app for agent work
+## One workspace: ShipGate
 
 | Tool | Role |
 |------|------|
 | **Cursor** | Spec, context, delegate, parallel verify + review |
+| **pytest / curl** | Automated verifiers from Level 1 |
 
-StarterApp (Exercises 01–08) is optional SwiftUI practice. **Verify with named commands** — tests, `xcodebuild`, scripts — not "Xcode as the product."
-
-Week 3+: your repo, your verifiers. See [14-verification-practices.md](14-verification-practices.md).
+No Xcode required. Optional iOS sandbox: [sample-app/](../sample-app/).
 
 ## Before you begin
 
 - [ ] [AI engineer mindset](00-ai-engineer-mindset.md)
-- [ ] [Competency map](12-ai-engineer-competencies.md) — skim levels 0→3
+- [ ] [ShipGate levels](15-shipgate-levels.md)
+- [ ] [Competency map](12-ai-engineer-competencies.md)
 - [ ] [Watch Cursor Learn](00-watch-first.md)
-- [ ] Cursor installed; repo open in Cursor
-- [ ] (Optional sandbox) `xcodebuild` or run StarterApp once — see [06-cursor-plus-xcode.md](06-cursor-plus-xcode.md)
+- [ ] ShipGate setup:
 
-## AI engineer loop (every session)
+```bash
+cd shipgate && uv venv && source .venv/bin/activate && uv pip install -e ".[dev]"
+pytest -q   # 2 failures until Ex 02–03 — expected
+```
+
+## AI engineer loop
 
 ```
 SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 ```
-
-| Step | Practice |
-|------|----------|
-| SPEC | Exercise done-when |
-| CONTEXT | AGENTS.md, `@sample-app/`, skills |
-| PLAN | Shift+Tab for multi-file |
-| DELEGATE | Agent mode |
-| VERIFY | Automated + human (parallel lanes) |
-| REVIEW | `/review-bugbot` (same time as verify) |
-| CAPTURE | LEARNINGS.md |
-
-## How to use this repo
-
-1. Mindset + competencies (above)
-2. Docs `01` → `06`, then `08`–`14` as syllabus dictates
-3. Exercises same day as reading
-4. **Week 3:** [Exercise 09](../exercises/09-ai-engineer-graduation.md) on non-mobile work
 
 ## Day 1
 
@@ -52,10 +39,4 @@ SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 | 3 | [02-day-1-explore-and-edit.md](02-day-1-explore-and-edit.md) | 15 min |
 | 4 | [Exercise 02](../exercises/02-small-change.md) | 30 min |
 
-## Mental model
-
-You are not the typist. You are the **engineer who owns spec, context, verification, and memory**.
-
-The agent is fast and confident and wrong without you.
-
-Next: [14-verification-practices.md](14-verification-practices.md) · [01-install-and-open.md](01-install-and-open.md)
+Next: [01-install-and-open.md](01-install-and-open.md)

@@ -1,55 +1,47 @@
-# Exercise 02 — Small verified change
+# Exercise 02 — Empty checklist message (Level 1)
 
-**Goal:** One Agent edit, **parallel verify**.  
+**Goal:** One Agent edit, **parallel verify**, first green test.  
 **Time:** ~30–45 minutes  
+**Level:** L1 Core  
 **Read first:** [docs/02-day-1-explore-and-edit.md](../docs/02-day-1-explore-and-edit.md), [docs/05-verify-loop.md](../docs/05-verify-loop.md)
 
 ## Spec (paste into Agent first)
 
 ```
 ## Goal
-When StarterApp has zero habits, show a friendly empty state with title and subtitle instead of a blank list.
+When a checklist has zero items, empty_message() returns helpful copy for an engineer about to ship.
 
 ## Done when
-- [ ] Sandbox build succeeds (`xcodebuild` or your chosen verifier — name the command)
-- [ ] Manual path: deleting all habits shows the empty state
-- [ ] Human: diff reviewed — only SwiftUI files under sample-app/ changed
-- [ ] Agent review: `/review-bugbot` run on sample-app (parallel with build)
+- [ ] pytest tests/test_core.py::test_empty_message_shows_helpful_copy passes
+- [ ] Human: diff reviewed — only shipgate/shipgate/core/ changed (unless tests need one-line tweak)
+- [ ] Agent review: /review-bugbot on shipgate/ (parallel with pytest)
 
 ## Out of scope
-- Core Data / SwiftData
-- New screens
-- Design system / assets overhaul
+- API routes
+- Database
+- CLI changes
 ```
 
-## Implementation prompt (after spec)
+## Implementation prompt
 
 ```
 Implement the spec above.
-Use iOS 17 APIs. Match existing code style.
-@HabitListView.swift @HabitStore.swift
+Match existing style in @shipgate/shipgate/core/store.py
+Run pytest tests/test_core.py::test_empty_message_shows_helpful_copy when done.
 ```
-
-Adjust `@` paths to match actual filenames if needed.
 
 ## Verify (parallel lanes)
 
-Start all at once when the diff is ready:
-
-1. **Automated:** `xcodebuild -scheme StarterApp -destination 'platform=iOS Simulator,name=iPhone 16' build` (or sandbox verifier you named)
-2. **Human:** read diff; run manual empty-state path
-3. **Agent review:** `/review-bugbot` on `sample-app/`
-
-## If build fails
-
-Paste full verifier output. Ask for minimal fix only.
+1. **Automated:** `cd shipgate && pytest tests/test_core.py::test_empty_message_shows_helpful_copy -q`
+2. **Human:** read diff
+3. **Agent review:** `/review-bugbot` on `shipgate/`
 
 ## Capture
 
 Append to [LEARNINGS.md](../LEARNINGS.md):
 
 ```markdown
-## YYYY-MM-DD — Exercise 02 empty state
+## YYYY-MM-DD — Exercise 02 empty_message
 - Worked:
 - Failed:
 - Rule for next time:

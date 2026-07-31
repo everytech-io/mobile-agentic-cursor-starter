@@ -1,40 +1,49 @@
-# Exercise 01 — Explore the codebase
+# Exercise 01 — Explore ShipGate (Level 1)
 
 **Goal:** Orient with Agent before writing code.  
 **Time:** ~20 minutes  
+**Level:** L1 Core  
 **Verify:** No code changes required.
+
+## Setup (once)
+
+```bash
+cd shipgate
+uv venv && source .venv/bin/activate
+uv pip install -e ".[dev]"
+pytest -q    # note: 2 failures until Ex 02–03
+```
 
 ## Steps
 
-1. Open Cursor on this repo root.
+1. Open Cursor on repo root.
 2. Open Agent (**⌘I**).
 3. Paste:
 
 ```
-@sample-app/StarterApp/
+@shipgate/
 
-Explain StarterApp like I'm a rusty iOS dev returning after a break.
+Explain ShipGate like I'm a rusty dev returning to code after mobile-only work.
 Include:
-- App entry point
-- How habits are stored (in memory? persisted?)
-- Main user flows today
-- File I'd open first to change the list UI
-- One deliberate gap in the app meant for exercises
+- What problem ShipGate solves (pre-ship checklist)
+- Level 1 vs Level 2 vs Level 3 layers
+- Where checklist domain logic lives
+- File I'd open first to change empty-checklist behavior
+- Intentional gaps left for exercises
 
 Max 12 bullets.
 ```
 
-4. Open each file Agent mentions. Confirm paths exist — **do not trust paths you haven't clicked**.
-5. (Optional) Run StarterApp once — `xcodebuild` or simulator — to match Agent's description to runtime.
+4. Open each file Agent mentions — confirm paths exist.
+5. Run `pytest tests/test_core.py -q` and note which tests fail (Exercise 02–03 targets).
 
 ## Success criteria
 
-- [ ] You can name the entry `@main` file
-- [ ] You found `HabitListView` (or equivalent list view)
-- [ ] You ran the app once in Xcode
-- [ ] You noticed the empty list is rough (setup for Exercise 02)
+- [ ] You can name the domain module (`shipgate/core/store.py`)
+- [ ] You understand **2 failing tests are intentional**
+- [ ] You know the Level 1 verifier: `pytest tests/test_core.py`
 
-## Reflect (2 sentences in LEARNINGS.md)
+## Reflect (LEARNINGS.md)
 
 What did Agent get right? What was wrong or vague?
 

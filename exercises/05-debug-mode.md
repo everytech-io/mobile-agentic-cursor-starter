@@ -1,53 +1,44 @@
-# Exercise 05 — Debug Mode
+# Exercise 05 — Debug toggle bug (Level 2)
 
-**Goal:** Use Debug Mode for a reproducible logic bug.  
+**Goal:** Debug Mode for reproducible domain bug.  
 **Time:** ~60 min  
+**Level:** L2 API/Core  
 **Read first:** [docs/11-debug-and-review.md](../docs/11-debug-and-review.md)
 
-## Setup
+## Bug (intentional in starter code)
 
-Complete Exercise 02 (empty state) first if you haven't — Debug works best on real UI state.
+When a checklist item is **FAILED**, calling `toggle_item_passed` sets it to **PASSED** instead of **PENDING** first.
 
 ## Spec
 
 ```
 Debug Mode:
 
-Bug: When I delete ALL habits then add one new habit, the list sometimes looks wrong
-(empty or stale) until I background the app.
+Bug: toggle_item_passed on a FAILED item marks it PASSED; should reset to PENDING.
 
 Repro:
-1. ⌘R StarterApp
-2. Swipe-delete every habit
-3. Add → "Morning run" → Save
-4. Observe list
+1. Create checklist with one item via store or API
+2. set_item_status(..., FAILED)
+3. toggle_item_passed(...)
+4. Observe status is PASSED (wrong)
 
-Expected: one row "Morning run"
-Actual: (describe what you see)
+Expected: PENDING after toggle from FAILED
 
-@HabitListView.swift @HabitStore.swift
+@shipgate/shipgate/core/store.py
 
-Hypothesize, instrument if useful, fix minimally, parallel verify (build + manual repro + Bugbot), remove debug logs.
+Fix minimally. Add or update a pytest that locks correct behavior.
+Parallel verify: pytest -q + Bugbot.
 ```
 
 ## Steps
 
-1. **Shift+Tab** → **Debug** mode
-2. Paste spec above (edit Actual after you reproduce)
-3. Follow agent reproduction steps in simulator
-4. **⌘R** after fix — repeat repro path
-5. Confirm instrumentation removed from diff
-
-## If Debug Mode is limited for SwiftUI
-
-Fallback workflow (still valid):
-
-1. Ask mode: trace state flow for empty → add
-2. Paste **Xcode console** output into Debug/Agent chat
-3. Minimal fix + verify
+1. **Shift+Tab** → Debug
+2. Reproduce with pytest or API
+3. Fix + add regression test
+4. Parallel verify
 
 ## Capture
 
-LEARNINGS entry: Did Debug beat guess-and-check?
+LEARNINGS: Did Debug beat guess-and-check?
 
 Next: [06-agents-md.md](06-agents-md.md)

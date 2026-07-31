@@ -1,16 +1,23 @@
 # Mobile → AI Engineer
 
-**EveryTech** — transition **rusty mobile developers** into **AI engineers** who spec, engineer context, delegate to agents, verify with evidence, and ship — not just write screens faster.
+**EveryTech** — transition **rusty mobile developers** into **AI engineers** who spec, engineer context, delegate to agents, verify with evidence, and ship.
 
-[![EveryTech](https://img.shields.io/badge/org-everytech--io-blue)](https://github.com/everytech-io)
+[![EveryTech](https://img.shields.io/badge/org-everytech--io-blue)](https://github.com/everytech-io/mobile-agentic-cursor-starter)
 
-**StarterApp (SwiftUI)** is the Week 1–2 sandbox. **Week 3 graduation** is the same agentic loop on *your* real work (API, scripts, tickets, MCP).
+## ShipGate — the training app
 
-| Phase | You learn |
-|-------|-----------|
-| **Mindset** | Mobile dev → AI engineer identity ([mindset doc](docs/00-ai-engineer-mindset.md)) |
-| **Week 1–2** | Spec, context, modes, skills, Plan, Debug, parallel verify — via StarterApp sandbox |
-| **Week 3** | Transfer loop to non-mobile work ([graduation exercise](exercises/09-ai-engineer-graduation.md)) |
+Build **[ShipGate](shipgate/)** (pre-ship checklist) through **four levels** — core → API → CLI → transfer. Verifiers are real from day one: `pytest`, `curl`, exit codes.
+
+| Level | Week | Layer | Verifier |
+|-------|------|-------|----------|
+| **L1** | 1 | Python domain | `pytest tests/test_core.py` |
+| **L2** | 2 | FastAPI REST | `pytest tests/test_api.py` + `curl` |
+| **L3** | 2–3 | CLI for CI | `shipgate check` exit code |
+| **L4** | 3 | Your work | Your project's tests/scripts/MCP |
+
+Map: [docs/15-shipgate-levels.md](docs/15-shipgate-levels.md)
+
+Optional legacy iOS sandbox: [sample-app/](sample-app/) — not required.
 
 ## Start here
 
@@ -18,14 +25,17 @@
 git clone https://github.com/everytech-io/mobile-agentic-cursor-starter.git
 cd mobile-agentic-cursor-starter
 cursor .
+
+cd shipgate && uv venv && source .venv/bin/activate && uv pip install -e ".[dev]"
+pytest -q   # 2 failures until Exercises 02–03 — expected
 ```
 
-1. **[AI engineer mindset](docs/00-ai-engineer-mindset.md)** — read this first
-2. [Watch — Cursor Learn](docs/00-watch-first.md)
-3. [Day 1 mechanics](docs/00-start-here.md)
-4. [Competency map](docs/12-ai-engineer-competencies.md)
+1. **[AI engineer mindset](docs/00-ai-engineer-mindset.md)**
+2. **[ShipGate levels](docs/15-shipgate-levels.md)**
+3. [Watch — Cursor Learn](docs/00-watch-first.md)
+4. [Day 1](docs/00-start-here.md)
 
-**Syllabus:** [docs/07-week-1-syllabus.md](docs/07-week-1-syllabus.md) (now 3-week arc)
+**Syllabus:** [docs/07-week-1-syllabus.md](docs/07-week-1-syllabus.md)
 
 ## AI engineer loop
 
@@ -37,39 +47,34 @@ SPEC → CONTEXT → [PLAN] → DELEGATE → VERIFY ∥ REVIEW → CAPTURE
 |-------|--------|
 | Context | AGENTS.md, skills, `@`, LEARNINGS, plans in git |
 | Delegate | Ask / Agent / Plan / Debug, MCP (Week 3+) |
-| Verify | Tests, scripts, curl, lint, build — **parallel** human + agent review |
-| Review | `/review-bugbot`, review prompt (runs alongside verify, not after) |
+| Verify | `pytest`, `curl`, scripts — parallel human + Bugbot |
 
-Deep dive: [Verification practices](docs/14-verification-practices.md) · [Verify loop](docs/05-verify-loop.md)
+Deep dive: [14-verification-practices.md](docs/14-verification-practices.md) · [05-verify-loop.md](docs/05-verify-loop.md)
 
 ## Docs map
 
 | Topic | Doc |
 |-------|-----|
-| Mindset shift | [00-ai-engineer-mindset](docs/00-ai-engineer-mindset.md) |
-| Competencies + rubric | [12-ai-engineer-competencies](docs/12-ai-engineer-competencies.md) |
-| Context engineering | [13-context-engineering](docs/13-context-engineering.md) |
-| Verification (parallel lanes) | [14-verification-practices](docs/14-verification-practices.md), [05-verify-loop](docs/05-verify-loop.md) |
-| Modes | [08-cursor-modes](docs/08-cursor-modes.md) |
-| AGENTS.md | [09-agents-md](docs/09-agents-md.md) |
-| Skills | [10-skills](docs/10-skills.md) |
-| Plan / Debug / Bugbot | [03](docs/03-plan-mode.md), [11](docs/11-debug-and-review.md) |
+| **ShipGate levels** | [15-shipgate-levels](docs/15-shipgate-levels.md) |
+| Mindset | [00-ai-engineer-mindset](docs/00-ai-engineer-mindset.md) |
+| Competencies | [12-ai-engineer-competencies](docs/12-ai-engineer-competencies.md) |
+| Verification | [14-verification-practices](docs/14-verification-practices.md) |
+| Context | [13-context-engineering](docs/13-context-engineering.md) |
 
 ## Repo layout
 
 ```
-docs/              # Mindset → competencies → mechanics → Week 3
-exercises/         # 01–09 (09 = AI engineer graduation, non-mobile)
-sample-app/        # StarterApp — training sandbox only
-AGENTS.md          # Example always-on context
-.cursor/skills/    # Example skills (promote patterns from LEARNINGS)
-LEARNINGS.md       # Regression log → future skills
+shipgate/           # Primary app — Levels 1–3
+  shipgate/core/    # Level 1 domain
+  shipgate/api/     # Level 2 REST
+  shipgate/cli/     # Level 3 terminal
+  tests/            # Your eval suite
+  scripts/verify.sh # Named verifier for AGENTS.md
+exercises/          # 01–09 mapped to levels
+sample-app/         # Optional legacy SwiftUI sandbox
+AGENTS.md           # Always-on context
+.cursor/skills/     # shipgate-core, verify-after-edit
 ```
-
-## Program plan
-
-- [HIGH-LEVEL-PLAN.md](docs/HIGH-LEVEL-PLAN.md)
-- [Expanded plan](docs/plans/2026-08-01-expanded-plan.md)
 
 ## License
 

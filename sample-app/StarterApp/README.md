@@ -1,24 +1,14 @@
-# StarterApp (sample iOS app)
+# Legacy — StarterApp (optional)
 
-Minimal SwiftUI habit list used **only** for Cursor tutorial exercises. Open in Xcode:
+**Not the primary course track.** Use only if you want SwiftUI practice alongside ShipGate.
 
-```bash
-open StarterApp.xcodeproj
-```
+The AI engineer path is [ShipGate](../shipgate/) — pytest, API, CLI. See [docs/15-shipgate-levels.md](../docs/15-shipgate-levels.md).
 
-Press **⌘R** — you should see **StarterApp** in the nav bar with two sample habits.
-
-## Notes
-
-- **iOS 17+** — `@Observable`, `#Preview`, `NavigationStack`
-- **Signing:** Set your Team in Xcode → StarterApp target → Signing & Capabilities
-- **Bundle ID:** `io.everytech.starterapp` (change locally if it conflicts)
-- **Not a product** — in-memory data, intentional gaps for exercises (see root [AGENTS.md](../../AGENTS.md))
-
-## Verify from terminal (optional)
+To run:
 
 ```bash
-xcodebuild -scheme StarterApp \
-  -destination 'generic/platform=iOS Simulator' \
-  build
+open sample-app/StarterApp/StarterApp.xcodeproj
+# optional: xcodebuild -scheme StarterApp ...
 ```
+
+Verifier here is optional sandbox only — not graduation.

@@ -1,82 +1,38 @@
-# Exercise 09 — AI engineer graduation (non-mobile)
+# Exercise 09 — AI engineer graduation (Level 4)
 
-**Goal:** Prove the agentic loop on **real work outside StarterApp**.  
+**Goal:** Prove the loop on **real work** — extend ShipGate or your own repo.  
 **Time:** ~2–3 hours  
-**Read first:** [docs/12-ai-engineer-competencies.md](../docs/12-ai-engineer-competencies.md)
+**Read first:** [docs/12-ai-engineer-competencies.md](../docs/12-ai-engineer-competencies.md), [docs/15-shipgate-levels.md](../docs/15-shipgate-levels.md)
 
-This is the transition from "mobile dev who used Cursor" to **AI engineer**.
+## Pick ONE path
 
----
+| Path | Example done-when |
+|------|-------------------|
+| **A. ShipGate L4** | SQLite persistence + pytest; or GitHub MCP reads PR checks into a checklist |
+| **B. Script / CLI** | Automate one task; exit 0 on success |
+| **C. API / backend** | One handler change + test or curl |
+| **D. Ticket** | Linear/Jira → branch → fix → PR |
+| **E. MCP workflow** | Agent completes one read-only query you specify |
 
-## Pick ONE task (not SwiftUI)
+Copy to target project: `AGENTS.md`, `.cursor/skills/`, `LEARNINGS.md`.
 
-Choose work you actually have — one bounded outcome:
-
-| Option | Example done-when |
-|--------|-------------------|
-| **A. Script / CLI** | Python/shell script that automates one repetitive task; runs clean |
-| **B. API / backend** | One endpoint or handler change + test or curl verify |
-| **C. Docs / spec** | PRD or RFC from messy notes; saved in repo |
-| **D. Ticket closure** | Jira/Linear ticket → branch → fix → PR description |
-| **E. MCP workflow** | Wire one MCP (GitHub, etc.); agent completes one read-only query you specify |
-
-Open **that project's folder** in Cursor (or a dedicated branch). Copy pattern from this repo:
-
-- `AGENTS.md` (adapted)
-- `.cursor/skills/` (at least one skill)
-- `LEARNINGS.md` (start fresh or append)
-
----
-
-## Required loop (all steps)
+## Required loop
 
 | Step | Requirement |
 |------|-------------|
-| 1. SPEC | Written done-when / out-of-scope in chat or markdown |
-| 2. CONTEXT | AGENTS.md + `@` relevant files **or** one skill |
-| 3. PLAN | Plan Mode for anything >1 file; save to `docs/plans/` |
-| 4. DELEGATE | Agent implements; you review every diff |
-| 5. VERIFY ∥ REVIEW | **Parallel:** automated verifier + human diff/path + `/review-bugbot` ([05](../docs/05-verify-loop.md), [14](../docs/14-verification-practices.md)) |
-| 6. CAPTURE | LEARNINGS entry + skill update if agent repeated a mistake |
+| SPEC | done-when / out-of-scope |
+| CONTEXT | AGENTS.md + `@` or skill |
+| PLAN | Plan Mode if >1 file; save to `docs/plans/` |
+| DELEGATE | Agent implements; you review diff |
+| VERIFY ∥ REVIEW | Parallel: automated + human + Bugbot ([05](../docs/05-verify-loop.md)) |
+| CAPTURE | LEARNINGS + skill if repeat mistake |
 
----
+## Mentor rubric (Level 3)
 
-## Plan prompt template
-
-```
-Plan Mode:
-
-Project: <your repo — NOT StarterApp>
-Task: <A–E above>
-
-Done when:
-- [ ] Verifier: <test command / curl / script / human checklist>
-- [ ] Diff scoped to task only
-- [ ] AGENTS.md updated if new convention discovered
-
-Out of scope: ...
-
-Save plan to workspace when approved.
-@AGENTS.md
-```
-
----
-
-## Mentor rubric (Level 3 AI engineer)
-
-- [ ] Task was **not** StarterApp UI
+- [ ] Task beyond L2 capstone scope (persistence, deploy, integration, or non-ShipGate repo)
 - [ ] Spec had testable done-when
-- [ ] Verification evidence exists (command output, test pass, PR link)
-- [ ] AGENTS.md or skill exists in target project
-- [ ] Can explain **context stack** from [13-context-engineering.md](../docs/13-context-engineering.md) without notes
+- [ ] Verifier evidence pasted (pytest/curl/PR/CI)
+- [ ] AGENTS.md in target project
+- [ ] Can teach context stack in 5 min
 
----
-
-## Optional Week 4+
-
-- MCP server for a tool your team uses
-- Cloud Agent for long-running research branch
-- Subagent: planner (Fable) + executor split
-- Port `verify-after-edit` pattern → `backend-verify` or domain-specific skill
-
-You are no longer learning Cursor for mobile. You are **operating as an AI engineer**.
+You are **operating as an AI engineer**, not completing a tutorial app.

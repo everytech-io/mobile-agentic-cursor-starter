@@ -1,6 +1,8 @@
 # The shift: mobile developer → AI engineer
 
-This course uses **StarterApp** (SwiftUI) as a sandbox. The goal is **not** to make you a faster iOS coder.
+This course uses **ShipGate** (pre-ship checklist) as the primary sandbox. The goal is **not** to make you a faster mobile coder.
+
+StarterApp under `sample-app/` is **optional legacy** iOS practice only.
 
 The goal is to make you an **AI engineer** — someone who directs agents, owns specs, builds durable context, and verifies outcomes like production systems depend on it.
 
@@ -33,7 +35,7 @@ You are not becoming a "prompt engineer." You are becoming someone who **operate
 6. **Closes the loop** — spec → plan → code → verify → ticket/deploy ([user's security arc pattern](https://cursor.com/learn/creating-features))
 7. **Knows domain beats model** — the agent doesn't know your BSS, your QBS index, your SwiftUI deployment target; **you do**
 
-StarterApp is **Week 1 gym equipment**. Week 3+ is your real codebase, APIs, scripts, and agent workflows.
+StarterApp is optional. **ShipGate levels** are the gym. Week 3+ is your real codebase, APIs, scripts, and agent workflows.
 
 ---
 
@@ -61,8 +63,8 @@ VERIFY and REVIEW run **in parallel** after the diff exists — do not serialize
 
 | Week | You become capable of… | Sandbox |
 |------|------------------------|---------|
-| **1** | Agent loop + parallel verify | StarterApp sandbox (any verifier you choose) |
-| **2** | Modes, AGENTS.md, skills, Debug, review | Same sandbox, richer agent ops |
+| **1** | Agent loop + parallel verify | ShipGate L1 — core + pytest |
+| **2** | Modes, AGENTS.md, skills, API | ShipGate L2 — REST + curl |
 | **3** | **Transfer** — same loop on *your* work | Your repo / API / script / ticket |
 
 Week 3 is where "AI engineer" becomes real. See [12-ai-engineer-competencies.md](12-ai-engineer-competencies.md) and [Exercise 09](../exercises/09-ai-engineer-graduation.md).

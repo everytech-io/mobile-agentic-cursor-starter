@@ -21,7 +21,7 @@ Official backdrop: [What is agentic coding?](https://cursor.com/help/ai-features
 | C9 | **Domain authority** | No | You catch wrong APIs; agent doesn't ([00-ai-engineer-mindset](00-ai-engineer-mindset.md)) |
 | C10 | **Transfer to non-mobile work** | **Graduation** | [Exercise 09](../exercises/09-ai-engineer-graduation.md) |
 
-| C4 on sandbox only | StarterApp optional — graduation uses **your** verifiers |
+| C4 on sandbox | ShipGate pytest/curl — graduation uses **your** verifiers |
 
 ---
 
@@ -65,7 +65,7 @@ Docs: [official-cursor-links.md](official-cursor-links.md) · Phase 4 in [HIGH-L
 | Re-prompting instead of reverting plan | Revert → refine plan → rebuild |
 | 500-line AGENTS.md | Split into skills |
 | No LEARNINGS after failure | Capture or repeat forever |
-| Mobile skills only | Week 3 on your real stack |
+| Mobile skills only | Week 3 on your real stack; ShipGate L4 or own repo |
 
 ---
 
