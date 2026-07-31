@@ -9,7 +9,7 @@ Official Cursor path: [Quickstart — explain codebase](https://cursor.com/docs/
 Open Agent (**⌘I**). Use this prompt (copy verbatim):
 
 ```
-Explain the HabitPeek sample app under sample-app/StarterApp/.
+Explain the StarterApp sample app under sample-app/StarterApp/.
 List: entry point, main views, data model, and one intentional rough edge I could fix in an exercise.
 Keep it under 15 bullet points.
 ```

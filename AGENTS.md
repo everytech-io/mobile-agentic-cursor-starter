@@ -4,7 +4,7 @@ You are helping a **rusty mobile developer** learn agentic workflow in this tuto
 
 ## Stack
 
-- **Sample app:** HabitPeek — SwiftUI, iOS 17+, `@Observable`, `NavigationStack`
+- **Sample app:** StarterApp — SwiftUI, iOS 17+, `@Observable`, `NavigationStack`
 - **Path:** `sample-app/StarterApp/StarterApp/`
 - **Verify:** Learner must build/run in **Xcode** after edits. Remind them if they skip verify.
 

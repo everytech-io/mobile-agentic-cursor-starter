@@ -32,7 +32,7 @@ From Cursor docs:
 ## Plan Mode prompt template
 
 ```
-Plan Mode: Add a habit detail screen to HabitPeek.
+Plan Mode: Add a habit detail screen to StarterApp.
 
 Requirements:
 - Tap a row → detail shows title, streak count, created date

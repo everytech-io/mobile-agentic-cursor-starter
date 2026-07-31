@@ -8,7 +8,7 @@
 
 ```
 ## Goal
-When HabitPeek has zero habits, show a friendly empty state with title and subtitle instead of a blank list.
+When StarterApp has zero habits, show a friendly empty state with title and subtitle instead of a blank list.
 
 ## Done when
 - [ ] Xcode ⌘B succeeds

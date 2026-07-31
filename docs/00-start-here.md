@@ -23,7 +23,7 @@ You do **not** need Xcode MCP or an M-series Mac for this course.
 open sample-app/StarterApp/StarterApp.xcodeproj
 ```
 
-Press **⌘R** on iPhone simulator. You should see **HabitPeek** (the sample habit tracker) with two habits.
+Press **⌘R** on iPhone simulator. You should see **StarterApp** (the sample habit tracker) with two habits.
 
 ## How to use this repo
 

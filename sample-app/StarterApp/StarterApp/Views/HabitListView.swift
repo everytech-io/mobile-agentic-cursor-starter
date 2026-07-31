@@ -13,7 +13,7 @@ struct HabitListView: View {
                 }
                 .onDelete(perform: store.delete)
             }
-            .navigationTitle("HabitPeek")
+            .navigationTitle("StarterApp")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Add") { isAdding = true }

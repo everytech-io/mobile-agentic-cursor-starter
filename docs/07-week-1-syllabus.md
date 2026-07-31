@@ -27,7 +27,7 @@ You can:
 
 - [ ] Completed exercises 01–04
 - [ ] At least 3 entries in LEARNINGS.md
-- [ ] Built and ran HabitPeek after every Agent session
+- [ ] Built and ran StarterApp after every Agent session
 - [ ] Used Plan Mode at least once
 - [ ] Used `@` to reference specific files at least twice
 - [ ] Read [Agent overview](https://cursor.com/docs/agent/overview) and [agentic coding](https://cursor.com/help/ai-features/agentic-coding.md)

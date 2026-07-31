@@ -13,7 +13,7 @@
 ```
 @sample-app/StarterApp/
 
-Explain HabitPeek like I'm a rusty iOS dev returning after a break.
+Explain StarterApp like I'm a rusty iOS dev returning after a break.
 Include:
 - App entry point
 - How habits are stored (in memory? persisted?)

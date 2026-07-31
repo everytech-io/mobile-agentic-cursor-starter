@@ -7,7 +7,7 @@
 ## Spec
 
 ```
-Plan Mode: Add a habit detail screen to HabitPeek.
+Plan Mode: Add a habit detail screen to StarterApp.
 
 ## Done when
 - [ ] Tap habit row → detail screen with title, streak, created date

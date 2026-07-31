@@ -20,7 +20,7 @@ cursor .
 open sample-app/StarterApp/StarterApp.xcodeproj
 ```
 
-Select an iPhone simulator → **⌘R**. Confirm **HabitPeek** launches.
+Select an iPhone simulator → **⌘R**. Confirm **StarterApp** launches.
 
 Keep Xcode open in the background for the rest of the course.
 
@@ -48,7 +48,7 @@ Not required for Day 1. We add verify checks in [05-verify-loop.md](05-verify-lo
 
 - [ ] Cursor opens this repo as the workspace root (folder name in sidebar)
 - [ ] Agent panel opens with ⌘I
-- [ ] HabitPeek runs in simulator
+- [ ] StarterApp runs in simulator
 - [ ] You know where `docs/`, `exercises/`, and `sample-app/` live
 
 Next: [Exercise 01 — Explore](../exercises/01-explore.md)

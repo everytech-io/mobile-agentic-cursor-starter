@@ -50,6 +50,8 @@ You do not need Xcode MCP or an M-series Mac. This course uses a proven dual wor
 ```
 mobile-agentic-cursor-starter/
 ├── docs/                 # Guided workflow (read in order)
+│   ├── HIGH-LEVEL-PLAN.md  # Mentor / Fable planning skeleton
+│   └── plans/            # Expanded plans land here
 ├── exercises/            # Hands-on tasks with prompts
 ├── sample-app/StarterApp # Tiny SwiftUI app for practice
 ├── LEARNINGS.md          # Your session log (append after each exercise)
@@ -70,6 +72,8 @@ mobile-agentic-cursor-starter/
 
 Full syllabus: [docs/07-week-1-syllabus.md](docs/07-week-1-syllabus.md)
 
+**Program plan (for mentors / planning subagents):** [docs/HIGH-LEVEL-PLAN.md](docs/HIGH-LEVEL-PLAN.md) — hand off to Fable or Plan Mode to expand Phase 2–4.
+
 Official Cursor docs index: [docs/official-cursor-links.md](docs/official-cursor-links.md)
 
 ## Core workflow (memorize this)
@@ -83,16 +87,14 @@ Official Cursor docs index: [docs/official-cursor-links.md](docs/official-cursor
 6. CAPTURE  → Append one entry to LEARNINGS.md
 ```
 
-## Sample app
+## Sample app — StarterApp
 
-The Xcode project lives at `sample-app/StarterApp/`. The app’s **display name is HabitPeek** — a fictional mini habit tracker we use only for exercises (not a real product).
+The Xcode project is at `sample-app/StarterApp/`. Same name in the nav bar when you run it.
 
-It shows a list of habits with streaks, in-memory storage, and **intentional gaps** for you to fix with Agent:
+Mini in-memory habit list for exercises only — not a shipped product. Intentional gaps:
 
 - No empty state (Exercise 02)
 - No detail screen (Exercise 03)
-
-The app is small on purpose. You practice **agent workflow**, not architecture.
 
 ## After Week 1
 
